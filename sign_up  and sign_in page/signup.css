@@ -1,0 +1,80 @@
+* {
+    font-family: Brandon Text,Arial,sans-serif;
+    
+}
+#container {
+    margin: auto;
+    margin-top: 100px;
+    width: 25%;
+    height: auto;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    
+}
+#userDataForm > input {
+    /* width: 90%; */
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin-top: -14px;
+}
+#userDataForm > p {
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+#submit {
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+p, a {
+    color: grey;
+}
+.commonDiv {
+    height: 30px;
+    display: flex;
+    margin-top: 10px;
+    /* flex-direction: row; */
+}
+.commonDiv > div > p {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.commonDiv+p {
+    margin-top: 20px;
+}
+img {
+    /* height: 20px; */
+    height: 100%;
+}
+#showEmail {
+    margin-top: -30px;
+    display: flex;
+    justify-content: space-between;
+}
+#showEmail > div:nth-child(2) {
+    margin-top: 15px;
+    /* margin-bottom: 100px; */
+}
+span {
+    color: red;
+}
+p + h5 {
+    margin-top: 10px;
+}
+
+@media all and (min-width: 451px) and (max-width:750px) {
+    #container {
+        width: 90%;
+    }
+}
+
+@media all and (min-width: 100px) and (max-width:450px) {
+    #container {
+        width: 90%;
+    }
+}
