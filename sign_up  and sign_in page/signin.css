@@ -1,0 +1,41 @@
+* {
+    font-family: Brandon Text,Arial,sans-serif;
+    
+}
+#container {
+    margin: auto;
+    margin-top: 100px;
+    width: 29%;
+    height: auto;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+}
+input {
+    padding: 10px;
+    margin-top: -12px;
+}
+#next {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+p, a {
+    color: grey;
+}
+#container > h2+p {
+    margin-top: 7px;
+    margin-bottom: 4px;
+}
+@media all and (min-width: 451px) and (max-width:750px) {
+    #container {
+        width: 85%;
+    }
+}
+@media all and (min-width: 100px) and (max-width:450px) {
+    #container {
+        width: 85%;
+    }
+}
