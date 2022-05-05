@@ -1,6 +1,15 @@
-document.querySelector("#next").addEventListener("click", nextFunction)
+document.querySelector("#emailForm").addEventListener("submit", nextFunction)
+
+var windowsize = window.innerWidth;
+console.log(windowsize)
+if(windowsize < 750) {
+    document.querySelector("#nav").innerHTML = `<input type="search" placeholder="Search for product or brands">`
+
+}
 
 function nextFunction () {
+    event.preventDefault();
+
     var Email = document.querySelector("#email").value;
     
     if(Email.length !==  0){

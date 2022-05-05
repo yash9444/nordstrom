@@ -206,10 +206,51 @@ body {
     #container {
         width: 80%;
     }
+    #headnav > input {
+        display: none;
+    }
+    #headnav > h1 {
+        font-size: 20px;
+    }
+    #nav input {
+        width: 90%;
+        padding: 14px;
+    }
+    #uper p+p {
+        display: none;
+    }
+    #footer {
+        display: none;
+    }
+    #lastLine {
+        display: none;
+    }
 }
 
 @media all and (min-width: 100px) and (max-width:450px) {
     #container {
         width: 95%;
+    }
+    #headnav > input {
+        display: none;
+    }
+    #headnav > h1 {
+        font-size: 17px;
+    }
+    #nav input {
+        width: 90%;
+        padding: 10px;
+    }
+    #headnav h1 {
+        margin-right: -150px;
+    }
+    #uper p+p {
+        display: none;
+    }
+    #footer {
+        display: none;
+    }
+    #lastLine {
+        display: none;
     }
 }

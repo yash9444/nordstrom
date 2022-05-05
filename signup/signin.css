@@ -5,6 +5,7 @@
 #navContainer a {
     text-decoration: none;
     color: black;
+    box-sizing: border-box;
 }
 
 body {
@@ -30,6 +31,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
 }
 
 #headnav>input {
@@ -81,10 +83,13 @@ body {
     flex-direction: column;
 }
 #container input {
+    width: 100%;
     padding: 10px;
     margin-top: -12px;
+    box-sizing: border-box;
 }
 #next {
+    width: 100%;
     background-color: black;
     text-align: center;
     color: white;
@@ -136,10 +141,50 @@ body {
     #container {
         width: 85%;
     }
-    
+    #headnav > input {
+        display: none;
+    }
+    #headnav > h1 {
+        font-size: 20px;
+    }
+    #nav input {
+        width: 90%;
+        padding: 14px;
+    }
+    #uper p+p {
+        display: none;
+    }
+    #footer {
+        display: none;
+    }
+    #lastLine {
+        display: none;
+    }
 }
 @media all and (min-width: 100px) and (max-width:450px) {
     #container {
         width: 85%;
+    }
+    #headnav > input {
+        display: none;
+    }
+    #headnav > h1 {
+        font-size: 17px;
+    }
+    #nav input {
+        width: 90%;
+        padding: 10px;
+    }
+    #headnav h1 {
+        margin-right: -150px;
+    }
+    #uper p+p {
+        display: none;
+    }
+    #footer {
+        display: none;
+    }
+    #lastLine {
+        display: none;
     }
 }

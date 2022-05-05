@@ -2,6 +2,12 @@ var name = JSON.parse(localStorage.getItem("userName"));
 document.querySelector("#PlaceName").innerText = "Hi,"+ " " + name
 document.querySelector("#showfirstName").innerText = "Welcome," + " "+ name + "!"
 
+var windowsize = window.innerWidth;
+console.log(windowsize)
+if(windowsize < 750) {
+    document.querySelector("#nav").innerHTML = `<input type="search" placeholder="Search for product or brands">`
+
+}
 
 document.querySelector("#next").addEventListener("click", messageFunction)
 

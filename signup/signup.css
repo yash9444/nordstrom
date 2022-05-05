@@ -66,6 +66,7 @@ body {
 }
 #container {
     margin: auto;
+    position: relative;
     margin-top: 40px;
     margin-bottom: 40px;
     width: 25%;
@@ -81,6 +82,15 @@ body {
     width: 100%;
     padding: 10px;
     margin-top: -14px;
+}
+#showPs {
+    font-size: 12px;
+    color: grey;
+    position: absolute;
+    text-decoration: underline;
+    right: 15px;
+    /* top: %; */
+    cursor: pointer;
 }
 #userDataForm > p {
     margin-top: 25px;
@@ -166,10 +176,51 @@ p + h5 {
     #container {
         width: 90%;
     }
+    #headnav > input {
+        display: none;
+    }
+    #headnav > h1 {
+        font-size: 20px;
+    }
+    #nav input {
+        width: 90%;
+        padding: 14px;
+    }
+    #uper p+p {
+        display: none;
+    }
+    #footer {
+        display: none;
+    }
+    #lastLine {
+        display: none;
+    }
 }
 
 @media all and (min-width: 100px) and (max-width:450px) {
     #container {
         width: 90%;
+    }
+    #headnav > input {
+        display: none;
+    }
+    #headnav > h1 {
+        font-size: 17px;
+    }
+    #nav input {
+        width: 90%;
+        padding: 10px;
+    }
+    #headnav h1 {
+        margin-right: -150px;
+    }
+    #uper p+p {
+        display: none;
+    }
+    #footer {
+        display: none;
+    }
+    #lastLine {
+        display: none;
     }
 }

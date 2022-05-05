@@ -1,5 +1,28 @@
 var Email = JSON.parse(localStorage.getItem("userEmail"));
-document.querySelector("#emailPara").innerText = Email
+document.querySelector("#emailPara").innerText = Email;
+
+var windowsize = window.innerWidth;
+console.log(windowsize)
+if(windowsize < 750) {
+    document.querySelector("#nav").innerHTML = `<input type="search" placeholder="Search for product or brands">`
+
+}
+
+document.querySelector("#showPs").addEventListener("click", toggle);
+
+function toggle() {
+    console.log("ok")
+    var textinside = document.querySelector("#showPs").innerText;
+    console.log(textinside)
+    if(textinside == "Show") {
+        document.getElementById("password").setAttribute("type", "text")
+        document.querySelector("#showPs").innerText = "Hide"
+    }
+    else if (textinside == "Hide") {
+        document.getElementById("password").setAttribute("type", "password")
+        document.querySelector("#showPs").innerText = "Show"       
+    }
+}
 
 document.querySelector("#userDataForm").addEventListener("submit", userDataSubmit)
 
