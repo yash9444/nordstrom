@@ -13,8 +13,9 @@ body{
    margin-top: 120px;
    display: flex;
    justify-content: space-around;
-   align-items: flex-start;
+   /* align-items: flex-start; */
 }
+
 #sale>div,#women>div,#men>div,#kids>div,#young-adult>div{
    /* border: 1px solid green; */
    width: 15%;

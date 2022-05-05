@@ -151,10 +151,6 @@ body {
     color: rgb(61, 59, 59);
     font-family: sans-serif;
 }
-#col3>div{
-    /* border: 1px solid; */
-    
-}
 #col3>div>img{
     width: 104%;
 }
@@ -201,9 +197,41 @@ body {
 #footer p{
     font-size: 14px;
 }
+a{
+    text-decoration: none;
+}
 .FH{
     color: black;
 }
 #headnav input{
     margin-left: 150px;
+}
+.cat{
+    display: none;
+    /* display: grid; */
+    margin: auto;
+    justify-content: center;
+    border: 5px solid teal;
+}
+#nav :hover .cat{
+    display: flex;
+    position: absolute;
+    background-color: white;
+    padding: 30px;
+   
+}
+.cat img{
+width: 50%;
+}
+.cat *{
+    margin-left: 20px;
+}
+li{
+    display: grid;
+}
+
+.cat h4:hover ,p:hover{
+    text-decoration: underline;
+    color: darkorange;
+    cursor: pointer;
 }
