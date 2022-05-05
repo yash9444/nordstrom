@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="mainpg.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+
+<body>
+
+    <div class="page">
+        <div id="header">
+            <div id="uper">
+                <p><b>Shipping outside of the U.S. or Canada?</b></p>
+                <p><u> Learn About International Shipping</u></p>
+            </div>
+            <div id="headnav">
+                <h1>NORDSTROM</h1>
+                <input type="search" placeholder="Search for product or brands">
+                <a href="signin.html" id="signin">Sign In</a>
+                <img src="data:image/png;base64,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"
+                    alt="cart logo" id="cart-img">
+                    <a id="cart-items" href="cart.html"></a>
+            </div>
+            <hr>
+            <div id="nav">
+                <p><a href="">sale</a></p>
+                <p><a href="">Woman</a></p>
+                <p><a href="">Men</a></p>
+                <p><a href="">kids</a></p>
+                <p><a href="">Young Adult</a></p>
+                <p><a href="">Activewere</a></p>
+                <p><a href="">Home</a></p>
+                <p><a href="">Beauty</a></p>
+                <p><a href="">Designer</a></p>
+                <p><a href="">Gifts</a></p>
+                <p><a href="">Brands</a></p>
+            </div>
+        </div>
+
+        <div id="sidebar">
+
+            <details>
+                <summary>Product Type</summary>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+            </details>
+            <details>
+                <summary>Size</summary>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+            </details>
+            <details>
+                <summary>Color</summary>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+            </details>
+            <details>
+                <summary>Brand</summary>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+            </details>
+            <details>
+                <summary>Feature</summary>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+            </details>
+            <details>
+                <summary>Fit</summary>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+            </details>
+            <details>
+                <summary>Material</summary>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+                <div class="droplist">
+                    <input type="checkbox">
+                    <label>Jacket</label>
+                </div>
+            </details>
+
+        </div>
+
+        <div class="main">
+            <h2>Womens Clothing</h2>
+            <!-- <div id="products"> </div> -->
+        </div>
+
+        <div id="footer">
+            <div>
+                <h5 class="FH"><b>Customer <br>Service</b></h5>
+                <p><a
+                        href="https://www.nordstrom.com/browse/customer-service?origin=footer&cm_sp=corp-_-corp_CustomerService-_-globalfooternav_contactus">Contact</a>
+                </p>
+                <p><a href="https://www.nordstrom.com/signin/order-lookup">order status</a></p>
+                <p>Shipping</p>
+                <p>Return Policy & Exchanges</p>
+                <p>price Adjustnent</p>
+                <p>Gift cards</p>
+                <p>FAQ</p>
+                <p>Product Recalls</p>
+            </div>
+            <div>
+                <h5 class="FH"><b>About Us</b></h5>
+                <p>Carees</p>
+                <p>Cprporate social Responsibility</p>
+                <p>Diversity Inclusion & <br> Belonging</p>
+                <p>Get email Updates</p>
+                <p>Nordstrom Blog</p>
+                <p>Nordy Podcast</p>
+            </div>
+            <div>
+                <h5 class="FH"><b>Store & <br>services</b></h5>
+                <p>Find a store</p>
+                <p>free style help</p>
+                <p>Alterations & Tailoring</p>
+                <p>Trunk Club</p>
+                <p>Pop-in-shop</p>
+                <p>Virtual Events</p>
+                <p>Spa Nordstrom</p>
+                <p>Nordstrom Resturant</p>
+                <p>Nordstrom Local</p>
+            </div>
+            <div>
+                <h5 class="FH"><b>Nordstrom Card <br>& Reward</b></h5>
+                <p>The Nordy Club Rewards</p>
+                <p>pay my bill</p>
+                <p>Manage My<br>Nordstrom Card</p>
+            </div>
+            <div>
+                <h5 class="FH"><b>Nordstrom, Inc.</b></h5>
+                <p>Nordstrom Rack</p>
+                <p>Nordstrom canada</p>
+                <p>trunk club</p>
+                <p>Invester Relation</p>
+                <p>Press Releases</p>
+                <p>Nordstrom Media Network</p>
+            </div>
+
+            <div>
+                <div class="getapp">
+                    <img src="https://cdn-icons-png.flaticon.com/512/77/77082.png" alt="">
+                    <a href="#">Get our apps</a>
+                </div>
+                <div class="follow">
+                    <img src="https://cdn.icon-icons.com/icons2/1211/PNG/512/1491579602-yumminkysocialmedia36_83067.png" alt="">
+                    <img src="https://image.similarpng.com/very-thumbnail/2020/04/Popular-Logo-facebook-icon-png.png" alt="">
+                    <img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" alt="">
+                    <img src="https://image.similarpng.com/very-thumbnail/2020/05/Pinterest-circular-icon-PNG.png" alt="">
+                    
+                </div>  
+            </div>
+
+            
+            
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+<script>
+
+    var products_data = [
+        {
+            brand: "Puma",
+            name: "selena floral FileList",
+            price: "2000",
+            size: "X,XX,XXL",
+            productID: "women1",
+            catagory: "Casual",
+            rating: "3",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/t/w/twentydressesmix_dr0935_1_984da863.jpg?rnd=20200526195200",
+        },
+        {
+            brand: "Gap",
+            name: "balck bella",
+            price: "1347",
+            size: "X,M,L,XX,XXL",
+            productID: "women2",
+            catagory: "festive",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/1/4/146117301_1_7fcd0574.jpg?rnd=20200526195200",
+        },
+        {
+            brand: "Puma",
+            name: "chil pill supersoft palysuit",
+            price: "799",
+            size: "M,L,XX,XXS",
+            productID: "women3",
+            catagory: "party",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/a/c/achwsivc466_1_a6c9da54.jpg?rnd=20200526195200",
+        },
+        {
+            brand: "Gap",
+            name: "plus size womens",
+            price: "2000",
+            size: "X,M,L,XXS,XXL",
+            productID: "women4",
+            catagory: "formal",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/i/n/ind158-pnk_1_3dc181e4.jpg?rnd=20200526195200",
+        },
+        {
+            brand: "Bady Moo",
+            name: "balck bella",
+            price: "1347",
+            size: "X,M,L",
+            productID: "women5",
+            catagory: "workout",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/p/h/pheeta-pht0067_1_96256fbd.jpg?rnd=20200526195200",
+        },
+        {
+            brand: "Pepe jeans",
+            name: "plus size womens",
+            price: "979",
+            size: "XXS,M,L",
+            productID: "women6",
+            catagory: "travel",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/o/_/o_228327501_1_857abfa6.jpg?rnd=20200526195200",
+        },
+        {
+            brand: "Puma",
+            name: "chil pill supersoft palysuit",
+            price: "2000",
+            size: "XXL,M,L",
+            productID: "women7",
+            catagory: "sports",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/t/w/twentydressesmix_dr0769_1_90caf4b3.jpg?rnd=20200526195200",
+        },
+        {
+            brand: "Gap",
+            name: "chil pill supersoft palysuit",
+            price: "1347",
+            size: "X,M,L,XX",
+            productID: "women8",
+            catagory: "Casual",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/k/a/kazo-123019black_1_85f6e006.jpg?rnd=20200526195200",
+        },
+        {
+            brand: "Bady Moo",
+            name: "balck bella",
+            price: "976",
+            size: "XS,M,L,XX",
+            productID: "women9",
+            catagory: "festive",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/r/t/rtor0011_1_67335460.jpg?rnd=20200526195200",
+        },
+        {
+            brand: "Gap",
+            name: "woman cotton off white",
+            price: "456",
+            size: "X,L,XX",
+            productID: "women10",
+            catagory: "party",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/a/h/ahtufrgfe19523_1_e0416277.jpg?rnd=20200526195200"
+        },
+        {
+            brand: "Bee bay",
+            name: "woman cotton off white",
+            price: "986",
+            size: "M,L,XXS",
+            productID: "women11",
+            catagory: "formal",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/a/c/achwkea595-1_dc090828.jpg?rnd=20200526195200",
+        },
+        {
+            brand: "Kaniroot",
+            name: "chill pill supersoft",
+            price: "567",
+            size: "S,M,L,XXl",
+            productID: "women12",
+            catagory: "workout",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/2/3/238451501_1_43bf9c90.jpg?rnd=20200526195200",
+        },
+        {
+            brand: "Bee bay",
+            name: "Curev multi-Color",
+            price: "765",
+            size: "S,X,L,XXl",
+            productID: "women13",
+            catagory: "travel",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/r/t/rtor0011_1_67335460.jpg?rnd=20200526195200",
+        },
+        {
+            brand: "Gap",
+            name: "Mega striple",
+            price: "9999",
+            size: "S,M,X,XXL",
+            productID: "women14",
+            catagory: "sports",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/o/_/o_119512401_1_e2d71be7.jpg?rnd=20200526195200",
+        },
+        {
+            brand: "Puma",
+            name: "balck bella",
+            price: "1347",
+            size: "S,M,X,XXL",
+            productID: "women15",
+            catagory: "Casual",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/1/4/146117301_1_7fcd0574.jpg?rnd=20200526195200",
+        },
+        {
+            brand: "Kaniroot",
+            name: "chil pill supersoft palysuit",
+            price: "799",
+            size: "S,M,L,XXL",
+            productID: "women16",
+            catagory: "festive",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/a/c/achwsivc466_1_a6c9da54.jpg?rnd=20200526195200",
+        },
+        {
+            brand: "Puma",
+            name: "plus size womens",
+            price: "2000",
+            size: "S,XX",
+            productID: "women17",
+            catagory: "party",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/i/n/ind158-pnk_1_3dc181e4.jpg?rnd=20200526195200",
+        },
+        {
+            brand: "Gap",
+            name: "balck bella",
+            price: "1347",
+            size: "S,M,XX,XXL",
+            productID: "women18",
+            catagory: "formal",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/p/h/pheeta-pht0067_1_96256fbd.jpg?rnd=20200526195200",
+        },
+        {
+            brand: "Bee bay",
+            name: "plus size womens",
+            price: "979",
+            size: "M,XXL,XX",
+            productID: "women19",
+            catagory: "workout",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/o/_/o_228327501_1_857abfa6.jpg?rnd=20200526195200",
+        },
+        {
+            brand: "Puma",
+            name: "chil pill supersoft palysuit",
+            price: "2000",
+            size: "M,X,L,XXL",
+            productID: "women20",
+            catagory: "travel",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/t/w/twentydressesmix_dr0769_1_90caf4b3.jpg?rnd=20200526195200",
+        },
+        {
+            brand: "Puma",
+            name: "chil pill supersoft palysuit",
+            price: "1347",
+            size: "M,L,XXL",
+            productID: "women21",
+            catagory: "sport",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/k/a/kazo-123019black_1_85f6e006.jpg?rnd=20200526195200",
+        },
+        {
+            brand: "Gap",
+            name: "balck bella",
+            price: "976",
+            size: "S,XX",
+            productID: "women22",
+            catagory: "Casual",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/r/t/rtor0011_1_67335460.jpg?rnd=20200526195200",
+        },
+        {
+            brand: "Puma",
+            name: "woman cotton off white",
+            price: "456",
+            size: "XXL",
+            productID: "women23",
+            catagory: "festive",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/a/h/ahtufrgfe19523_1_e0416277.jpg?rnd=20200526195200"
+        },
+        {
+            brand: "Gap",
+            name: "woman cotton off white",
+            price: "986",
+            size: "S,X,L",
+            productID: "women24",
+            catagory: "party",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/a/c/achwkea595-1_dc090828.jpg?rnd=20200526195200",
+        },
+        {
+            brand: "Kaniroot",
+            name: "chill pill supersoft",
+            price: "567",
+            size: "S,XXL,XX",
+            productID: "women25",
+            catagory: "formal",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/2/3/238451501_1_43bf9c90.jpg?rnd=20200526195200",
+        },
+    ];
+
+    var quickview=[];
+
+    var cartproduct = JSON.parse(localStorage.getItem("cartList")) || [];
+
+    var main = document.querySelector(".main");
+
+    var head = document.createElement("div");
+    head.setAttribute("id", "prodhead");
+
+    var itemscount = document.createElement("span");
+    itemscount.innerText = products_data.length + " " + "Items";
+
+    var array = ["All", "Casual", "festive", "party", "workout", "formal", "travel", "sports"];
+
+    var btndiv = document.createElement("div");
+    btndiv.setAttribute("id", "btndiv");
+
+    for (var i = 0; i < array.length; i++) {
+
+        var a = document.createElement("button");
+        a.setAttribute("id", "sortbtn");
+        a.innerText = array[i];
+        a.addEventListener("click", function (event) {
+            // console.log(event.target.innerText);
+            if (event.target.innerText == "All") {
+                display(products_data);
+                itemscount.innerText = products_data.length + " " + "Items";
+                var filter = document.querySelector("#mySelect");
+                filter.style.display = "block"
+            } else {
+                var filtered = products_data.filter(function (ele) {
+                    return ele.catagory == event.target.innerText;
+                });
+
+                display(filtered);
+                var filter = document.querySelector("#mySelect");
+                filter.style.display = "none"
+                itemscount.innerText = filtered.length + " " + "Items";
+            }
+        })
+        btndiv.append(a)
+        main.append(btndiv)
+    }
+
+
+    var selectList = document.createElement("select");
+    selectList.setAttribute("id", "mySelect");
+    var sort = [
+        { "type": "Featured Products", "value": "none" },
+        { "type": "Sort by Price: Low to High", "value": "lth" },
+        { "type": "Sort by Price: High to Low", "value": "htl" },
+        { "type": "Sort by Name: Ascending", "value": "asc" },
+        { "type": "Sort by Name: Descending", "value": "dsc" }
+    ];
+    for (var i = 0; i <= sort.length - 1; i++) {
+        var option = document.createElement("option");
+        option.value = sort[i].value;
+        option.text = sort[i].type;
+        selectList.appendChild(option);
+    }
+
+    
+
+    var products = document.createElement("div");
+    products.setAttribute("id", "products")
+
+
+    function display(data) {
+        products.innerHTML = null;
+
+        data.forEach(function (ele) {
+
+            let card = document.createElement("div");
+            card.setAttribute("id", "card")
+
+            var imgcard = document.createElement("div")
+            imgcard.setAttribute("class", "pro-image");
+
+            let img = document.createElement("img");
+            img.src = ele.img;
+            img.setAttribute("class", "pro-image")
+
+            var info = document.createElement("div");
+            info.setAttribute("class", "pro-info")
+
+            var color = document.createElement("div");
+            color.setAttribute("id", "colord");
+
+            var colordivs1 = document.createElement("div");
+            var colordivs2 = document.createElement("div");
+            var colordivs3 = document.createElement("div");
+            var colordivs4 = document.createElement("div");
+            var colordivs5 = document.createElement("div");
+
+            var star = document.createElement("div");
+            star.setAttribute("id", "stard");
+
+            var stardivs1 = document.createElement("i");
+            stardivs1.setAttribute("class", "ratingstar far fa-star");
+            var stardivs2 = document.createElement("i");
+            stardivs2.setAttribute("class", "ratingstar far fa-star");
+            var stardivs3 = document.createElement("i");
+            stardivs3.setAttribute("class", "ratingstar far fa-star");
+            var stardivs4 = document.createElement("i");
+            stardivs4.setAttribute("class", "ratingstar far fa-star");
+            var stardivs5 = document.createElement("i");
+            stardivs5.setAttribute("class", "ratingstar far fa-star");
+
+
+            var title = document.createElement("h2");
+            title.innerText = ele.brand;
+            title.setAttribute("class", "pro-brand")
+
+            var desc = document.createElement("a");
+            desc.innerText = ele.name;
+            desc.setAttribute("class", "pro-desc");
+
+            var price = document.createElement("h2");
+            price.innerText = "INR " + ele.price;
+            price.setAttribute("class", "price")
+
+            var button = document.createElement("button");
+            button.innerText = "Add to Cart";
+            button.setAttribute("class", "card-btn")
+
+            button.addEventListener("click", function () {
+                addtocart(ele);
+            })
+
+            imgcard.append(img, button)
+
+            info.append(title, desc, price);
+
+            color.append(colordivs1, colordivs2, colordivs3, colordivs4, colordivs5);
+
+            star.append(stardivs1, stardivs2, stardivs3, stardivs3, stardivs4, stardivs5)
+
+            card.append(imgcard, color, info, star);
+
+            products.append(card);
+        });
+    }
+
+    head.append(itemscount, selectList)
+    main.append(head, products);
+    display(products_data);
+
+
+
+    var filter = document.querySelector("#mySelect");
+    filter.addEventListener("change", function () {
+
+        var selector = document.querySelector("#mySelect").value;
+        // console.log(selector);
+        if (selector == "asc") {
+        products_data.sort(function (a, b) {
+        var x = a.brand.toUpperCase();
+        var y = b.brand.toUpperCase();
+        if (x > y) {
+          return 1;
+        }
+        if (x < y) {
+          return -1;
+        }
+        return 0;
+      });
+      // console.log(products_data);
+      display(products_data);
+    }
+    if (selector == "dsc") {
+      products_data.sort(function (a, b) {
+        var x = a.brand.toUpperCase();
+        var y = b.brand.toUpperCase();
+        if (x > y) {
+          return -1;
+        }
+        if (x < y) {
+          return 1;
+        }
+        return 0;
+      });
+      console.log(products_data);
+      display(products_data);
+    }
+        if (selector == "htl") {
+            products_data.sort(function (a, b) {
+                return b.price - a.price;
+            });
+            // console.log(products_data);
+            display(products_data);
+        }
+        if (selector == "lth") {
+            products_data.sort(function (a, b) {
+                return a.price - b.price;
+            });
+            // console.log(products_data);
+            display(products_data);
+        }
+    })
+    
+    
+    function addtocart(ele) {
+
+        var exists = cartproduct.filter(function (element) {
+            return ele.productID == element.productID;
+        })
+
+        if (exists.length > 0) {
+            alert("Product Exists")
+        }
+        else {
+            cartproduct.push(ele);
+            // console.log(ele);
+            localStorage.setItem("cartList", JSON.stringify(cartproduct));
+            alert("Product added successfully");
+            window.location.reload();
+        }
+        // console.log(cartData);
+    }
+    var ci=document.querySelector("#cart-items");
+    ci.innerText=cartproduct.length+" items";
+    ci.style.cursor="pointer"
+
+    ci.addEventListener("click",function(){
+        window.location.href("cart.html");
+    })
+
+
+    var ratingStars = [...document.getElementsByClassName("ratingstar")];
+
+    function executeRating(stars) {
+
+        var starClassActive = "ratingstar fas fa-star";
+        var starClassInactive = "ratingstar far fa-star";
+        var starsLength = stars.length;
+        let i;
+        stars.forEach((star) => {
+            star.onclick = () => {
+                i = stars.indexOf(star);
+
+                if (star.className === starClassInactive) {
+                    for (i; i >= 0; i--) {
+                        stars[i].className = starClassActive;
+                    }
+                } else {
+                    for (i; i < starsLength; i++) {
+                        stars[i].className = starClassInactive;
+                    }
+                }
+            };
+        });
+    }
+    executeRating(ratingStars);
+
+</script>

@@ -1,0 +1,274 @@
+
+
+
+.page {
+    display: grid;
+    grid: 100px auto / repeat(5, 1fr);
+    grid-template-areas:
+        "header header header header header"
+        "header header header header header"
+        "sidebar products products products products"
+        "footer footer footer footer footer";
+    grid-gap: 20px;
+}
+
+
+/* sidebar section */
+
+#sidebar {
+    grid-area: sidebar;
+    position: sticky;
+    top: 0;
+}
+
+details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+summary {
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid lightgray;
+    list-style: none;
+}
+
+details[open] summary:before {
+    content: '';
+    display: block;
+    background: transparent;
+}
+
+summary:after {
+    content: '';
+    float: right;
+    width: 8px;
+    height: 8PX;
+    border-bottom: 1px solid currentColor;
+    border-left: 1px solid currentColor;
+    border-bottom-left-radius: 2px;
+    transform: rotate(45deg) translate(50%, 0%);
+}
+
+.droplist {
+    display: flex;
+    padding-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.droplist>label {
+    margin-left: 15px;
+}
+
+
+
+/* main section */
+
+.main {
+    grid-area: products;
+}
+
+#btndiv {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.274);
+    display: flex;
+}
+
+#sortbtn {
+    border: 0px;
+    padding: 10px;
+    text-decoration: none;
+    background-color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#sortbtn:hover {
+    border-bottom: 2px solid black;
+}
+
+#prodhead {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+#mySelect {
+    width: 20%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#products {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: max-content;
+    gap: 5px;
+    row-gap: 20px;
+    margin: auto;
+}
+
+.imgcard {
+    width: 100%;
+}
+
+.pro-image {
+    width: 100%;
+    position: relative;
+}
+
+.card-btn {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: rgba(231, 226, 226, 0.5);
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+    text-transform: capitalize;
+}
+
+.pro-image:hover .card-btn {
+    opacity: 1;
+}
+
+.card-btn:hover {
+    background: #fff;
+}
+
+#colord {
+    height: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+#colord>div {
+    width: 6%;
+    height: 15px;
+    border-radius: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#colord>div:nth-child(1) {
+    background-color: rgb(74 71 74);
+}
+
+#colord>div:nth-child(2) {
+    background-color: rgb(141 74 65);
+}
+
+#colord>div:nth-child(3) {
+    background-color: rgb(140 163 192);
+}
+
+#colord>div:nth-child(4) {
+    background-color: lightgray;
+}
+
+#colord>div:nth-child(5) {
+    background-color: rgb(74 71 74);
+}
+
+#stard {
+    width: 100%;
+}
+
+.ratingstar {
+    margin-top: 10px;
+    cursor: pointer;
+    color: rgb(61, 60, 60);
+}
+
+.pro-info {
+    width: 100%;
+    height: 100px;
+    padding-top: 5px;
+}
+
+.pro-brand {
+    text-transform: capitalize;
+    font-size: 18px;
+}
+
+.pro-desc {
+    width: 100%;
+    margin-top: -10px;
+    overflow: hidden;
+    text-transform: capitalize;
+    font-size: 18px;
+    cursor: pointer;
+    color: rgb(73, 73, 73);
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+.pro-desc:hover{
+    text-decoration: underline 2px;
+}
+
+.price {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+
+#footer {
+    grid-area: footer;
+}
+
+#cart-items{
+    font-size: 18px;
+    color: red;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.getapp{
+    width: 200px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.getapp>img{
+    width: 30%;
+    height: 60px;
+}
+
+.getapp>a{
+    color: rgb(73, 73, 73);
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.follow {
+    display: flex;
+    width: 200px;
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.follow>img{
+    width: 15%;
+    height: 30px;
+}
