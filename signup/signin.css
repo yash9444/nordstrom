@@ -1,0 +1,190 @@
+#navContainer {
+    width: 95%;
+    margin: auto;
+}
+#navContainer a {
+    text-decoration: none;
+    color: black;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+#uper {
+    background-color: black;
+    width: 100%;
+    height: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#uper > p {
+    margin-right: 5%;
+}
+#headnav {
+    /* font-family: sans-serif; */
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#headnav>input {
+    height: 45px;
+    margin-top: -5px;
+    width: 60%;
+    margin-right: -18%;
+}
+
+#headnav>img {
+    height: 42px;
+}
+
+#headnav>p {
+    margin-left: 250px;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#nav a {
+    text-decoration: none;
+    color: rgb(65, 65, 65);
+}
+
+#nav p:hover {
+    text-decoration: underline 2px;
+}
+
+/* navbar end */
+
+
+* {
+    font-family: Brandon Text,Arial,sans-serif;
+    
+}
+#container {
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 8%;
+    width: 29%;
+    height: auto;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+}
+#container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: -12px;
+    box-sizing: border-box;
+}
+#next {
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+#container p, a {
+    color: grey;
+}
+#container > h2+p {
+    margin-top: 7px;
+    margin-bottom: 4px;
+}
+
+/* footer start */
+#footer{
+    display: grid;
+    grid-template-columns: repeat(6,16%);
+    color: rgb(73, 73, 73);
+    margin-top: 100px;
+    justify-content: center;
+    font-family: sans-serif;
+    /* background-color: azure; */
+    background-color: #FBF8F1;
+}
+#footer p{
+    font-size: 14px;
+}
+.FH{
+    color: black;
+}
+#lastLine {
+    padding: 2%;
+    background-color: #FBF8F1;
+}
+#lastLine > span {
+    margin-right: 40px;
+    font-size: 13px;
+    color: grey;
+}
+#lastLine span:hover {
+    text-decoration: underline 2px;
+}
+#footer>div p:hover {
+    text-decoration: underline 2px;
+}
+
+@media all and (min-width: 451px) and (max-width:750px) {
+    #container {
+        width: 85%;
+    }
+    #headnav > input {
+        display: none;
+    }
+    #headnav > h1 {
+        font-size: 20px;
+    }
+    #nav input {
+        width: 90%;
+        padding: 14px;
+    }
+    #uper p+p {
+        display: none;
+    }
+    #footer {
+        display: none;
+    }
+    #lastLine {
+        display: none;
+    }
+}
+@media all and (min-width: 100px) and (max-width:450px) {
+    #container {
+        width: 85%;
+    }
+    #headnav > input {
+        display: none;
+    }
+    #headnav > h1 {
+        font-size: 17px;
+    }
+    #nav input {
+        width: 90%;
+        padding: 10px;
+    }
+    #headnav h1 {
+        margin-right: -150px;
+    }
+    #uper p+p {
+        display: none;
+    }
+    #footer {
+        display: none;
+    }
+    #lastLine {
+        display: none;
+    }
+}
