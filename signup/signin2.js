@@ -12,6 +12,7 @@ function loginFunction() {
     for(var i = 0; i < arr.length; i++) {
         if(arr[i].userEmail == Email && Number(arr[i].userPassword) == Number(password)) {
             alert("Login successful")
+            break;
         }
         else {
             found = false
