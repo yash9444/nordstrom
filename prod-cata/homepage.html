@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" href="homepage.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <div id="uper">
+      <p><b>Shipping outside of the U.S. or Canada?</b></p>
+      <p><u> Learn About International Shipping</u></p>
+    </div>
+    <div id="container">
+      <div id="headnav">
+        <h1>NORDSTROM</h1>
+        <input type="search" placeholder="Search for product or brands" />
+        <p>sign up</p>
+        <img
+          src="data:image/png;base64,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"
+          alt="cart logo"
+        />
+      </div>
+      <hr />
+      <ul id="nav">
+        <li class="main-list">
+          <a href="#">sale</a>
+          <div>
+            <li>Sale: Get Inspired</li>
+            <hr
+              style="
+                margin-top: -10px;
+                margin-bottom: 0px;
+                border-top: 0.5px solid rgb(253, 249, 249);
+              "
+            />
+            <li>Bestsellers</li>
+            <li>New Markdowns</li>
+            <li>Price Matched</li>
+            <li>Nordstrom Made Sale</li>
+            <li>Men's Designer Sale</li>
+            <li>Women's Designer Sale</li>
+          </div>
+          <div>
+            <li>Women</li>
+            <li>New Markdowns</li>
+            <li>Clothing</li>
+            <li>Shoes</li>
+            <li>Handbags & Wallets</li>
+            <li>Jewelry</li>
+            <li>Accessories</li>
+            <li>Beauty</li>
+            <li>Contemporary</li>
+            <li>Designer</li>
+            <li>Plus</li>
+            <li>Petite</li>
+            <li>Maternity</li>
+            <li>Juniors</li>
+          </div>
+          <div>
+            <li>Men</li>
+            <li>New Markdowns</li>
+            <li>Clothing</li>
+            <li>Shoes</li>
+            <li>Accessories</li>
+            <li>Grooming & Cologne</li>
+            <li>Contemporary</li>
+            <li>Designer</li>
+            <li>Designer</li>
+            <li>Women</li>
+            <li>Men</li>
+            <li>Kids</li>
+          </div>
+          <div>
+            <li>Kids</li>
+            <li>New</li>
+            <li>Markdowns</li>
+            <li>Girls</li>
+            <li>Boys</li>
+            <li>Baby Sale Clothing, Shoes & Accessories</li>
+            <li>Baby Gear & Essentials</li>
+            <li>Shoes</li>
+            <li>Young Adult</li>
+            <li>Women</li>
+            <li>Men</li>
+            <li>Gender Inclusive</li>
+          </div>
+          <div>
+            <li>Home</li>
+            <li>Bedding & Bath</li>
+            <li>Home Decor</li>
+            <li>Electronics & Tech</li>
+            <li>Accessories</li>
+            <li>Luggage & Travel</li>
+            <li>Tabletop & Kitchen</li>
+            <h4>Beauty</h4>
+            <li>All Sale</li>
+          </div>
+          <div>
+            <img
+              class="cut-img"
+              src="https://as1.ftcdn.net/v2/jpg/03/11/74/34/1000_F_311743449_H2xbYofvYIrhjLC8xIm2fq7oAPXasPFz.jpg"
+              alt=""
+            />
+            <img
+              class="price-match-img"
+              src="https://n.nordstrommedia.com/id/c743f56c-93e7-4232-a882-e1e730777c8c.jpg"
+              alt=""
+            />
+            <li>Shop Price Matched</li>
+          </div>
+        </li>
+        <li><a href="#">Woman</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">kids</a></li>
+        <li><a href="#">Young Adult</a></li>
+        <li><a href="#">Activewere</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Beauty</a></li>
+        <li><a href="#">Designer</a></li>
+        <li><a href="#">Gifts</a></li>
+        <li><a href="#">Brands</a></li>
+      </ul>
+      <div id="sign">
+        <p><b>Shop what you love-faster and easier.</b></p>
+        <button>Sign In or Create an Account</button>
+      </div>
+      <div id="promo">
+        <img
+          src="https://d109mr28ux1v2k.cloudfront.net/offers/promo-fab9c51f-87b7-4464-a87c-2b2a7f9f5128/e_top_div.jpg"
+          alt=""
+        />
+      </div>
+      <div id="img3">
+        <img
+          id="ct"
+          src="https://n.nordstrommedia.com/id/7031b68e-0bd1-4897-a15f-500ded6d1694.jpeg?h=629&w=1340"
+          alt=""
+        />
+
+        <div class="tex" style="padding: 30px">
+          <h1>Nordstrom Celebrates AAPI Month</h1>
+          <p>
+            Join us as we honor Asian and Pacific Islander communities and
+            cultures alongside our employees, spotlight AAPI-led brands, and
+            share more about our diversity commitments.
+          </p>
+          <p>
+            <u
+              >Learn More <br />
+              Shop AAPI-Owned & founded brands</u
+            >
+          </p>
+        </div>
+      </div>
+      <h2 style="font-family: sans-serif">Great deals on popular items</h2>
+      <p style="color: rgb(101, 101, 101)">New markdowns on our best-sellers</p>
+      <div class="trend">
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/bb3db1e0-8472-4024-a9cb-feaebf1fcb58.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838"
+            alt=""
+          />
+          <p>Dolce Vita</p>
+          <h6 class="red">INR 6,569.47 - INR 10,266.08</h6>
+          <p class="red">(Up to 36% Off select items)</p>
+          <p>INR 10,266.00</p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/9a50b96c-1acc-409d-9297-cd85af0aadc0.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838"
+            alt=""
+          />
+          <p>Dolce Vita</p>
+          <h6 class="red">INR 6,159.65</h6>
+          <p class="red">(40% off)</p>
+          <p></p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/03268af0-ed1d-4409-a5bb-a18772993699.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838"
+            alt=""
+          />
+          <p>Dolce Vita</p>
+          <h6 class="red">INR 4,568.21 - INR 5,465.56</h6>
+          <p class="red">(Up to 40% Off select items)</p>
+          <p>INR 10,266.00</p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/510438b0-84a6-435e-9302-13af6d60ed6f.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838"
+            alt=""
+          />
+          <p>Dolce Vita</p>
+          <h6 class="red">INR 4,568.21 - INR 5,465.56</h6>
+          <p class="red">(Up to 20% Off select items)</p>
+          <p>INR 8,212.06</p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/bb3db1e0-8472-4024-a9cb-feaebf1fcb58.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838"
+            alt=""
+          />
+          <p>Dolce Vita</p>
+          <h6 class="red">INR 6,569.47 - INR 10,266.08</h6>
+          <p class="red">(Up to 36% Off select items)</p>
+          <p>INR 10,266.00</p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/0637d8a4-20be-4f5e-9086-6c03d2167c76.jpeg?q=45&dpr=2&h=365.31&w=230"
+            alt=""
+          />
+          <p>Dolce Vita</p>
+          <h6 class="red">INR 6,569.47 - INR 10,266.08</h6>
+          <p class="red">(Up to 36% Off select items)</p>
+          <p>INR 10,266.00</p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <img
+        style="width: 100%; margin-top: 30px"
+        src="https://n.nordstrommedia.com/id/4203735d-edd2-4158-a8d1-6c77bdfe130c.gif?h=299&w=1608"
+        alt=""
+      />
+      <div style="margin: 5px" id="img3">
+        <img
+          id="ct"
+          src="https://wwd.com/wp-content/uploads/2022/03/best-mothers-day-gifts.jpg?w=910&h=510&crop=1"
+          alt=""
+        />
+
+        <div class="tex" style="padding: 30px">
+          <h1>Mother's Day Is This Sunday!</h1>
+          <p>
+            Need a perfect gift by Mother's Day? You can still get it in time
+            with expedited shipping and store pickup options. See delivery dates
+            at checkout.
+          </p>
+          <p>
+            <u
+              >Our Gift Guide <br />
+              <br />
+              Mother's Day Gifts <br />
+              <br />
+              Pop-In Gifts <br />
+              <br />
+              Gift Cards</u
+            >
+          </p>
+        </div>
+      </div>
+      <br />
+      <hr style="height: 2px; background-color: black" />
+      <h3
+        style="
+          text-align: center;
+          color: rgb(65, 65, 65);
+          font-family: sans-serif;
+        "
+      >
+        TRENDING NOW
+      </h3>
+      <div id="trending">
+        <div>
+          <img
+            src="https://n.nordstrommedia.com/id/477f3419-48db-4448-bcdf-1ee9a9af1ca8.jpeg?h=522&w=804"
+            alt=""
+          />
+          <h3>It's All in the Shoe Details</h3>
+          <p>
+            Opt for eye-catching volume and interesting textures in the
+            most-wanted spring sandals, from Circus by Sam Edelman and more.
+          </p>
+          <p><u>Puffy & Ruched Sandals</u></p>
+        </div>
+        <div>
+          <img
+            src="https://n.nordstrommedia.com/id/7cae6918-5b6d-4855-967a-4318802fa308.jpeg?h=522&w=804"
+            alt=""
+          />
+          <h3>Celebrate in Style</h3>
+          <p>
+            From graduations to end-of-season parties, capture the joy of the
+            moment with the perfect outfit.
+          </p>
+          <p><u>Grad & Party Dresses</u></p>
+          <p><u>Grad & Party Shoes</u></p>
+        </div>
+      </div>
+      <div style="margin-top: 25px" id="img3">
+        <img
+          id="ct"
+          src="https://n.nordstrommedia.com/id/65237083-ac2a-4dbf-9bb5-637d14d1de9b.jpeg?h=700&w=1608"
+          alt=""
+        />
+
+        <div class="tex" style="padding: 30px">
+          <h1>The New Sexy</h1>
+          <p>Confidence is your best accessory with these standout styles.</p>
+          <p><u>The New Sexy</u></p>
+        </div>
+      </div>
+      <p style="font-size: 28px">Shop the Trend</p>
+      <div class="trend" id="STC">
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/6cc48d7c-3468-4f6a-bd9a-feae6b755d9f.jpeg?q=45&fit=fill&fm=jpg&dpr=2&h=408&w=266"
+            alt=""
+          />
+          <p>Sam Edelman</p>
+          <h6 class="ST">INR 6,569.47 - INR 10,266.08</h6>
+          <p>INR 10,266.00</p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/0058e5b1-0ec4-433b-8c6a-18a0f69aea02.jpeg?q=45&fit=fill&fm=jpg&dpr=2&h=408&w=266"
+            alt=""
+          />
+          <p style="color: rgb(90, 90, 202)">New!</p>
+          <p>ASTR the Label</p>
+          <h6 class="ST">INR 6,159.65</h6>
+          <p class="ST">(40% off)</p>
+          <p></p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/b502150c-1f76-4c2f-b19d-5aae9e4b153e.jpeg?q=45&fit=fill&fm=jpg&dpr=2&h=408&w=266"
+            alt=""
+          />
+          <p>Open Edit</p>
+          <h6 class="ST">INR 4,568.21 - INR 5,465.56</h6>
+          <p>INR 10,266.00</p>
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/3ed2ed5b-fc33-4125-aade-b2a93374c45a.jpeg?q=45&fit=fill&fm=jpg&dpr=2&h=408&w=266"
+            alt=""
+          />
+          <p style="color: rgb(90, 90, 202)">New!</p>
+          <p>ASTR the Label</p>
+          <h6 class="ST">INR 4,568.21 - INR 5,465.56</h6>
+          <p>INR 8,212.06</p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/8e968b6d-65c4-4f47-9c1a-dd2e6ebf503c.jpeg?q=45&fit=fill&fm=jpg&dpr=2&h=408&w=266"
+            alt=""
+          />
+          <p style="color: rgb(90, 90, 202)">New!</p>
+          <p>ASTR the Label</p>
+          <p>INR 10,266.00</p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/b70024b6-5c16-476f-ac69-7a4f7b471cb4.jpeg?q=45&fit=fill&fm=jpg&dpr=2&h=408&w=266"
+            alt=""
+          />
+          <p>Naked Wardrobe</p>
+          <h6 class="ST">INR 6,569.47 - INR 10,266.08</h6>
+          <p class="ST">(Up to 36% Off select items)</p>
+          <p>INR 10,266.00</p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div id="col3">
+        <div>
+          <img
+            src="https://n.nordstrommedia.com/id/7e999614-e6ab-4dbd-bf4b-433e24b9c6e1.jpeg?h=516&w=536"
+            alt=""
+          />
+          <h3>Introducing Misette</h3>
+          <p>
+            Artful dinnerware to elevate your everyday, with curated collections
+            you can use as a complete set or mix and match for an effortless
+            tablescape.
+          </p>
+          <p><u>All Home</u></p>
+        </div>
+        <div>
+          <img
+            src="https://n.nordstrommedia.com/id/984e1d98-87c3-4ad6-891c-00718b70ae97.jpeg?h=516&w=536"
+            alt=""
+          />
+          <h3>New Arrivals from LAGOS</h3>
+          <p>
+            Treat yourself to gorgeous styles from the Caviar Color and Covet
+            collections.
+          </p>
+          <p><u>Experience Fine Jewelry</u></p>
+        </div>
+        <div>
+          <img
+            src="https://n.nordstrommedia.com/id/22a3e98f-09d6-4acf-a650-b1c6d5755457.jpeg?h=516&w=536"
+            alt=""
+          />
+          <h3>Nude Is Not One Color</h3>
+          <p>
+            Nordstrom intimates that celebrate your skin, now in even more
+            shades and sizes.
+          </p>
+          <p><u>Lingerie, Hosiery & Shapewear</u></p>
+        </div>
+      </div>
+      <h2 style="font-family: sans-serif; margin-top: 70px">
+        New arrivals from brands you might like
+      </h2>
+      <div class="trend" id="STC">
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/1b25453a-b30d-4bb0-a29d-543424367436.jpeg?q=45&dpr=2&h=365.31&w=230"
+            alt=""
+          />
+          <p>Sam Edelman</p>
+          <h6 class="ST">INR 6,569.47 - INR 10,266.08</h6>
+          <p>INR 10,266.00</p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/d0ed624d-2677-41c7-9926-c6e35b3e1a6d.jpeg?q=45&dpr=2&h=365.31&w=230"
+            alt=""
+          />
+          <p style="color: crimson">New!</p>
+          <p>ASTR the Label</p>
+          <h6 class="ST">INR 6,159.65</h6>
+          <p class="ST">(40% off)</p>
+          <p></p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/2e0970ee-0273-4284-bf76-13d230f7c8cb.jpeg?q=45&dpr=2&h=365.31&w=230"
+            alt=""
+          />
+          <p>Open Edit</p>
+          <h6 class="ST">INR 4,568.21 - INR 5,465.56</h6>
+          <p>INR 10,266.00</p>
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/89661199-1891-48dd-9eba-f4227e3e00b1.jpeg?q=45&dpr=2&h=365.31&w=230"
+            alt=""
+          />
+          <p style="color: crimson">New!</p>
+          <p>ASTR the Label</p>
+          <h6 class="ST">INR 4,568.21 - INR 5,465.56</h6>
+          <p>INR 8,212.06</p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/46377128-0679-46e5-9238-6d24dfd79b6f.jpeg?q=45&dpr=2&h=365.31&w=230"
+            alt=""
+          />
+          <p style="color: crimson">New!</p>
+          <p>ASTR the Label</p>
+          <p>INR 10,266.00</p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/f3cc5541-6a1c-403e-995f-89e4941ed152.jpeg?q=45&dpr=2&h=365.31&w=230"
+            alt=""
+          />
+          <p>Naked Wardrobe</p>
+          <h6 class="ST">INR 6,569.47 - INR 10,266.08</h6>
+          <p class="ST">(Up to 36% Off select items)</p>
+          <p>INR 10,266.00</p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div id="NORDY">
+        <img
+          src="https://n.nordstrommedia.com/id/d42cbfbc-165c-4e70-bf9f-a1c02528bc6a.jpeg?h=200&w=938"
+          alt=""
+        />
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAACCCAMAAADYMBKwAAAAyVBMVEX29vYjHyDuHCUAAAAkHiD59/jv7e7X1db////9+/z6+vrLyMmcmpsfHh5hYWERCgwZFBUTEBHi4eHwHCJbWlseGhs/Pj719/P88vfz+/qDg4MrKitxcXFSUFH0GiE2NTWysbLt/PbywMHij5XVaHLXc3Xqm6Ly2NP89ebbXmrPABDdAA3TJirTbGrvycfWKjP1ABLYgHz47enROknjAAPRV1uQkJDjtLLYACPfABrcg4empabPNTzLQUTnqK/MFTLz2uHdmZjkSlECE1L0AAAEi0lEQVR4nO2Y22LaRhBAtVpWaJeLhIQQa0AIxy6OITgmBHNxm7j//1Ed3S+YRkEkfeicF4OB8WE82pmRoiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAI8v9DnP89Yyx6zCKSl5jruuEzVypDdubzvxShp9pCEaL8HcLnoWEqHfyUUnKu61Iq7knAfAj9XE5qIawbLXZhjPvt7I8Irec4tMWDlyzaMUfN+LXZcCjXtx/u7u7/mD+IYSkgP/rZ/0S7sU7SUF9Z90f9RJprN7StZy+CdCeVbjhOIs3YbP7xceF5i83y00qXxZB6m95oPAnRH/lXTjbTrTHtdbXYuTWgRlGagLSIpAnpJNLD2erJU0O8z8vndTEobxvGoBW/VetSOrauac11fwr/9khaiC01SUm6QbJMp9JMrL98tiNp1VY3X+eFwgZpYtKt4EGRaF2T0GnreskW2rhnEhJJi+bEcAhI58JDpjPpXKbly85OpIH90ypfIYF0wzH6zeCDgTQxe1vtStY6VAMhkbRQjrQXPKkmfbDVnLRtL2959qlQukF69AhhQ2mIMmhxVv9shGpwzEYsrVt9g5BIuljT70lLefByzure9p5W2XcNpSEUJNvisTTpOVvOlZrorQntNAJAWhxHsXO1TIsPBWlIu/c6F0kio0wHGJ2jiKUhUL+ply1+AjiOuU96cTDiTMbUIaR6ppl82XsFadXef31IWmZcHmFoOp5koTtHXqOyuTXJNIPrJHtcKdPKw59eIdfA5p5JmUmn8cwsNqET69JkQz+ZGuQMVTKtuO7q1S5Je/u/hCxn+iT61L/MGg66fJpPpKucHkJf7crS6rfvw9NMl4B6uejwE1rQRGpJQ/Ee1DKLT2vm/rt0I2g62gXOQXnAyVGrPJj7vCmmGdL+Oo+q42x5OEFRX94bCxUStAEnJ/3jTDP5fekVpVV7dyvlMJNORNMLEb6GA4OUXqPD6K30WmyY/W12flTKtHzbF85p+Aa7F3cmWbmmoX/3syOv9ggSjHedWLrL44Zetabde08tXoeLZzfaDZR8eQTNO2kucAlefN6lCOFHbRCkYfq9cczqmRbPxepQHw+KDHawvHTD6cFJkbbx0ZFfYS8TvNnNBibeGtHKNc3f9lFdRIe1tzi4wZjnKml5wJvpyIfdLRmYuhZXrrJMCtYmRiMZTa1xNJpWaePzXVwedtBVlm8sPwuF0k48+oM0XOmd9tn1+efRm3D4JUuAfiRGtZqeicMibuO2/bh8cWV5njaSJStcAia1RqVTa21rGPG6pfBm38hnWpydPZh72C02Hgwg9v5+LmAzz20uok1pP7notK5hXG0DSP8CdJpksYUSbNOCtGFm27hp5hdb9/buy3L39PcB9trhbDZUslxDkGyc0/o1+sl5uNZOpOFJy8/fQpgOBqNwRRXWaDAYZJlW2EyuV/P5OrwCYYLK3bIRfiuLAcFrz/7vIfIFV7hJIXRAlB++/94zvxe/5mZNNcT522fvvPW38B9mA0EQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEGQH/EPcblZflJH9+kAAAAASUVORK5CYII="
+          alt=""
+        />
+      </div>
+      <hr style="height: 2.5px; background-color: black; margin-top: 60px" />
+      <h2 style="font-family: sans-serif; margin-top: 70px; text-align: center">
+        SHOP YOUR WAY
+      </h2>
+      <img
+        style="margin-top: 50px; width: 100%"
+        src="https://n.nordstrommedia.com/id/9af9866a-ff51-45fe-b2fe-3f5a33fc811e.jpeg?h=400&w=1608"
+        alt=""
+      />
+      <img
+        style="margin-top: 50px; width: 100%"
+        src="https://n.nordstrommedia.com/id/199745ce-b775-482a-aa3b-8b49e8bf0ff2.gif?h=200&w=1608"
+        alt=""
+      />
+      <h2 style="font-family: sans-serif; margin-top: 70px">
+        We think you’ll love these
+      </h2>
+      <p>Based on items you've shopped</p>
+      <div class="trend" id="STC">
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/c67115f9-770c-43bd-99e9-8dbbe078a19d.jpeg?q=45&dpr=2&h=365.31&w=230"
+            alt=""
+          />
+          <p>Sam Edelman</p>
+          <h6 class="ST">INR 6,569.47 - INR 10,266.08</h6>
+          <p>INR 10,266.00</p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/1c91a22c-66ef-4c52-9806-3205f8347870.jpeg?q=45&dpr=2&h=365.31&w=230"
+            alt=""
+          />
+          <p style="color: crimson">New!</p>
+          <p>ASTR the Label</p>
+          <h6 class="ST">INR 6,159.65</h6>
+          <p class="ST">(40% off)</p>
+          <p></p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/02c94922-fedb-436a-aa73-1c66d3c63d48.jpeg?q=45&dpr=2&h=365.31&w=230"
+            alt=""
+          />
+          <p>Open Edit</p>
+          <h6 class="ST">INR 4,568.21 - INR 5,465.56</h6>
+          <p>INR 10,266.00</p>
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/a13c3989-f5c4-4a0e-9bb0-7a06d5da60bc.jpeg?q=45&dpr=2&h=365.31&w=230"
+            alt=""
+          />
+          <p style="color: crimson">New!</p>
+          <p>ASTR the Label</p>
+          <h6 class="ST">INR 4,568.21 - INR 5,465.56</h6>
+          <p>INR 8,212.06</p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/b2fa5e5d-779c-4d7e-9274-208fd6107c6e.jpeg?q=45&dpr=2&h=365.31&w=230"
+            alt=""
+          />
+          <p style="color: crimson">New!</p>
+          <p>ASTR the Label</p>
+          <p>INR 10,266.00</p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/3550e4d1-de3e-4195-a385-9dc850330d0c.jpeg?q=45&dpr=2&h=365.31&w=230"
+            alt=""
+          />
+          <p>Naked Wardrobe</p>
+          <h6 class="ST">INR 6,569.47 - INR 10,266.08</h6>
+          <p class="ST">(Up to 36% Off select items)</p>
+          <p>INR 10,266.00</p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <hr style="height: 2.5px; background-color: black; margin-top: 80px" />
+      <p
+        style="
+          font-size: 22px;
+          font-family: sans-serif;
+          text-align: center;
+          width: 100%;
+          margin-top: 60px;
+        "
+      >
+        SHOP BY CATEGORY
+      </p>
+      <div id="category">
+        <div>
+          <img
+            src="https://n.nordstrommedia.com/id/e3c5e72c-fb7f-4b15-a9cb-2979ee1f58ff.jpeg?h=365&w=268"
+            alt=""
+          />
+          <p><b>Women</b></p>
+        </div>
+        <div>
+          <img
+            src="https://n.nordstrommedia.com/id/59e0456f-9d43-4659-9541-e629f8a6b217.jpeg?h=365&w=268"
+            alt=""
+          />
+          <p><b>Men</b></p>
+        </div>
+        <div>
+          <img
+            src="https://n.nordstrommedia.com/id/e87bc8b2-4de9-415e-a762-abf2597572b0.jpeg?h=365&w=268"
+            alt=""
+          />
+          <p><b>Kids</b></p>
+        </div>
+        <div>
+          <img
+            src="https://n.nordstrommedia.com/id/aad0e43a-9790-49e3-aa60-43a61d81ba0e.jpeg?h=365&w=268"
+            alt=""
+          />
+          <p><b>Home</b></p>
+        </div>
+        <div>
+          <img
+            src="https://n.nordstrommedia.com/id/466f1c26-aede-4ead-8fd3-3e6164d1e43a.jpeg?h=365&w=268"
+            alt=""
+          />
+          <p><b>Beauty & Fragrance</b></p>
+        </div>
+        <div>
+          <img
+            src="https://n.nordstrommedia.com/id/30ddbbf9-fcc5-464f-99dd-ddc637bb6f98.jpeg?h=365&w=268"
+            alt=""
+          />
+          <p><b>Designer</b></p>
+        </div>
+      </div>
+      <p
+        style="
+          font-size: 20px;
+          font-family: sans-serif;
+          text-align: center;
+          width: 100%;
+          margin-top: 30px;
+          color: rgb(68, 66, 66);
+        "
+      >
+        <b>CURRENTLY LOVING</b>
+      </p>
+      <p style="text-align: center">
+        Explore favorite looks from Instagram. Tag @Nordstrom to show us your
+        finds.
+      </p>
+      <div id="col4">
+        <div>
+          <img
+            src="https://cdn.dashhudson.com/media/640/1639450121.23927782505.jpeg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://images.dashhudson.com/aHR0cHM6Ly9jZG4uZGFzaGh1ZHNvbi5jb20vbWVkaWEvZnVsbC8xNjUwNDcyNjY2LjU2NTExODg4NTEwNi5qcGVn.jpg?w=640&h=640&fit=cover"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://images.dashhudson.com/aHR0cHM6Ly9jZG4uZGFzaGh1ZHNvbi5jb20vbWVkaWEvZnVsbC8xNjQyNzM5NjkzLjQyOTA5NzQyMjM5MS5qcGVn.jpg?w=640&h=640&fit=cover"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://cdn.dashhudson.com/media/640/1639431352.383051971754.jpeg"
+            alt=""
+          />
+        </div>
+      </div>
+      <p
+        style="
+          font-size: 20px;
+          font-family: sans-serif;
+          width: 100%;
+          margin-top: 80px;
+          color: rgb(34, 34, 34);
+        "
+      >
+        <b>Trending near you</b>
+      </p>
+      <p style="font-family: sans-serif; font-size: 13.5px">
+        The most-viewed items by shoppers in your area
+      </p>
+
+      <div class="trend">
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/739d2cda-fb23-4601-bfe7-8c4c7dc25232.jpeg?q=45&dpr=2&h=365.31&w=230"
+            alt=""
+          />
+          <p>Dolce Vita</p>
+          <h6 class="red">INR 6,569.47 - INR 10,266.08</h6>
+          <p class="red">(Up to 36% Off select items)</p>
+          <p>INR 10,266.00</p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/f700020a-2c27-481a-a00d-ea8591513c45.jpeg?q=45&dpr=2&h=365.31&w=230"
+            alt=""
+          />
+          <p>Dolce Vita</p>
+          <h6 class="red">INR 6,159.65</h6>
+          <p class="red">(40% off)</p>
+          <p></p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/1de4dab7-a398-422c-8784-0312342e026b.jpeg?q=45&dpr=2&h=365.31&w=230"
+            alt=""
+          />
+          <p>Dolce Vita</p>
+          <h6 class="red">INR 4,568.21 - INR 5,465.56</h6>
+          <p class="red">(Up to 40% Off select items)</p>
+          <p>INR 10,266.00</p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/b73afbd9-e055-46d0-b7e7-2f5a852afa97.jpeg?q=45&dpr=2&h=365.31&w=230"
+            alt=""
+          />
+          <p>Dolce Vita</p>
+          <h6 class="red">INR 4,568.21 - INR 5,465.56</h6>
+          <p class="red">(Up to 20% Off select items)</p>
+          <p>INR 8,212.06</p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/b26de2c8-9315-4274-95ac-fe612e450030.jpeg?q=45&dpr=2&h=365.31&w=230"
+            alt=""
+          />
+          <p>Dolce Vita</p>
+          <h6 class="red">INR 6,569.47 - INR 10,266.08</h6>
+          <p class="red">(Up to 36% Off select items)</p>
+          <p>INR 10,266.00</p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="tpic"
+            src="https://n.nordstrommedia.com/id/sr3/21cf2ad4-557b-4a5e-8c68-aa612d560eb7.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838"
+            alt=""
+          />
+          <p>Dolce Vita</p>
+          <h6 class="red">INR 6,569.47 - INR 10,266.08</h6>
+          <p class="red">(Up to 36% Off select items)</p>
+          <p>INR 10,266.00</p>
+          <img
+            class="tlogo"
+            src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div>
+        <h5 class="FH">
+          <b>Customer <br />Service</b>
+        </h5>
+        <p>
+          <a
+            href="https://www.nordstrom.com/browse/customer-service?origin=footer&cm_sp=corp-_-corp_CustomerService-_-globalfooternav_contactus"
+            >Contact</a
+          >
+        </p>
+        <p>
+          <a href="https://www.nordstrom.com/signin/order-lookup"
+            >order status</a
+          >
+        </p>
+        <p>Shipping</p>
+        <p>Return Policy & Exchanges</p>
+        <p>price Adjustnent</p>
+        <p>Gift cards</p>
+        <p>FAQ</p>
+        <p>Product Recalls</p>
+      </div>
+      <div>
+        <h5 class="FH"><b>About Us</b></h5>
+        <p>Carees</p>
+        <p>Cprporate social Responsibility</p>
+        <p>
+          Diversity Inclusion & <br />
+          Belonging
+        </p>
+        <p>Get email Updates</p>
+        <p>Nordstrom Blog</p>
+        <p>Nordy Podcast</p>
+      </div>
+      <div>
+        <h5 class="FH">
+          <b>Store & <br />services</b>
+        </h5>
+        <p>Find a store</p>
+        <p>free style help</p>
+        <p>Alterations & Tailoring</p>
+        <p>Trunk Club</p>
+        <p>Pop-in-shop</p>
+        <p>Virtual Events</p>
+        <p>Spa Nordstrom</p>
+        <p>Nordstrom Resturant</p>
+        <p>Nordstrom Local</p>
+      </div>
+      <div>
+        <h5 class="FH">
+          <b>Nordstrom Card <br />& Reward</b>
+        </h5>
+        <p>The Nordy Club Rewards</p>
+        <p>pay my bill</p>
+        <p>Manage My<br />Nordstrom Card</p>
+      </div>
+      <div>
+        <h5 class="FH"><b>Nordstrom, Inc.</b></h5>
+        <p>Nordstrom Rack</p>
+        <p>Nordstrom canada</p>
+        <p>trunk club</p>
+        <p>Invester Relation</p>
+        <p>Press Releases</p>
+        <p>Nordstrom Media Network</p>
+      </div>
+      <div></div>
+    </div>
+  </body>
+</html>
