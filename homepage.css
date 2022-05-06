@@ -42,6 +42,7 @@ body {
 #nav {
     display: flex;
     justify-content: space-around;
+    position: relative;
 }
 
 #nav a {
@@ -212,6 +213,8 @@ a{
     margin: auto;
     justify-content: center;
     border: 5px solid teal;
+    position: absolute;
+    top: 30px;
 }
 #nav :hover .cat{
     display: flex;
