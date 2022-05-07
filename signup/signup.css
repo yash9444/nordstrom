@@ -23,6 +23,7 @@ body {
 }
 #uper > p {
     margin-right: 5%;
+    color: white;
 }
 #headnav {
     /* font-family: sans-serif; */
@@ -65,7 +66,7 @@ body {
 
 /* navbar end */
 * {
-    font-family: Brandon Text,Arial,sans-serif;
+    font-family: century-gothic, sans-serif;
     
 }
 #container {

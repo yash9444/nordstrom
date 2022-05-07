@@ -69,7 +69,7 @@ body {
 /* navbar end */
 
 * {
-    font-family: 'Lato', sans-serif;
+    font-family: century-gothic, sans-serif;
     
 }
 #container  p {
@@ -202,8 +202,10 @@ body {
 
 @media all and (min-width: 451px) and (max-width:750px) {
     #container {
-        width: 80%;
-        margin-right: 80px;
+        width: 85%;
+    }
+    #navContainer{
+        box-sizing: border-box;
     }
     #headnav > input {
         display: none;
@@ -231,10 +233,13 @@ body {
 
 @media all and (min-width: 100px) and (max-width:450px) {
     #container {
-        width: 95%;
+        width: 85%;
     }
     #headnav > input {
         display: none;
+    }
+    #navContainer{
+        box-sizing: border-box;
     }
     #headnav > h1 {
         font-size: 17px;

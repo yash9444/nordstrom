@@ -55,7 +55,9 @@ body {
     padding-left: 2%;
     padding-right: 2%;
 }
-
+#nav > p:first-child > a {
+    color: red;
+}
 #nav a {
     text-decoration: none;
     color: rgb(65, 65, 65);
@@ -67,10 +69,8 @@ body {
 
 /* navbar end */
 
-
 * {
-    font-family: Brandon Text,Arial,sans-serif;
-    
+    font-family: century-gothic, sans-serif;
 }
 #container {
     margin: auto;
@@ -186,11 +186,17 @@ body {
     #container {
         width: 85%;
     }
+    #navContainer{
+        box-sizing: border-box;
+    }
     #headnav > input {
         display: none;
     }
     #headnav > h1 {
-        font-size: 17px;
+        font-size: 15px;
+    }
+    #headnav > p {
+        font-size: 13px;
     }
     #nav input {
         width: 90%;
