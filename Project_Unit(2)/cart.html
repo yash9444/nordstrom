@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping JS</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
 
     <style>
 #layout{
@@ -21,12 +23,25 @@
     
     
 }
+
+#bag_Qn{
+    font-size:16px;
+    font-weight:bold;
+    color:rgb(94, 92, 92);
+}
+
+#saveLater{
+    font-size:16px;
+    font-weight:bold;
+    color:rgb(94, 92, 92);
+  
+}
 #select>button{
     /* border:1px solid red; */
-    padding: 0px 50px 0px 50px ;
+    padding: 10px 50px 10px 50px ;
     width:auto;;
     border:0.5px solid rgb(197, 194, 194);
-    font-weight: 100;
+    /* font-weight: 100; */
     background-color:white;
     color:rgb(109, 108, 108);
     
@@ -265,7 +280,7 @@ option{
 padding:20px 160px 20px 160px;
 color:white;
 background-color: black;
-font-size:14px;
+font-size:12px;
 
 }
 #total_div button:hover{
@@ -289,12 +304,14 @@ font-size:14px;
     </style>
 </head>
 <body>
-    
+    <div id="myhead">
+        
+    </div>
 
     <div id="layout">
         <div id="select">
-            <button><h3>Shopping Bag (0)</h3></button>
-            <button><h3>Save for Latter(0)</h3></button>
+            <button id="bag_Qn"><h3>Shopping Bag (<span>0</span>)</h3></button>
+            <button id="saveLater"><h3>Save for Latter(<span>0</span>)</h3></button>
         </div>
 <!-- ============================================================================================================================================================================ -->
 
@@ -303,6 +320,13 @@ font-size:14px;
 </body>
 
 <script>
+
+// document.querySelector("#select>button").addEventListener(mouseenter,changeBG)
+// function changeBG(){
+//     document.querySelector("#select>button").style.backgroundColor=rgb(236, 236, 236);
+// }
+
+
 //--------------for logos---------------------------------------
 var logo_arr=[{image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBx3L9gVvXgsPxx3GUDBZ24eW4SIxGFupLcg&usqp=CAU"},
 {image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3t6XNjYQMo44KyGbd2w7kaD3P_twVH583bDN6eDaDThLay7mJIYEjDHgOaz0hSbajLVg&usqp=CAU"},
@@ -360,17 +384,31 @@ var rcnt_view=[{image:"https://n.nordstrommedia.com/id/sr3/81acc066-bb53-4050-a4
  name:"New MarkDown", price:"INR 4,106.43",rating:"****",size:"Medium "
 }]
 
-var product_bag=[{image:"https://n.nordstrommedia.com/id/sr3/0166a797-049e-4a72-8aef-f430e3c96a79.jpeg?w=156&h=240%22,name1:%22VUORI%22,name2:%22Zephyr%20Mesh%20T-Shirt%22,size:%22Small%22,color:%22BLACK%20HEATHER%22,item:%226887717"
-,name1:"VUORI",name2:"Zephyr Mesh T-Shirt",size:"Small",color:"BLACK HEATHER",item:"6887717",price:"54.00",qtn:20}
-,{image:"https://n.nordstrommedia.com/id/sr3/3c393ec9-0275-4725-a9f4-39f8008437b4.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",name1:"VUORI",name2:"Zephyr Mesh T-Shirt",size:"Small",color:"BLACK HEATHER",item:"6887717",price:"104.00"
-,qtn:12},{image:"https://n.nordstrommedia.com/id/sr3/3c393ec9-0275-4725-a9f4-39f8008437b4.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",name1:"VUORI",name2:"Zephyr Mesh T-Shirt",size:"Small",color:"BLACK HEATHER",item:"6887717"
-,price:"64.00",qtn:15}]
+// var product_bag=[{image:"https://n.nordstrommedia.com/id/sr3/0166a797-049e-4a72-8aef-f430e3c96a79.jpeg?w=156&h=240%22,name1:%22VUORI%22,name2:%22Zephyr%20Mesh%20T-Shirt%22,size:%22Small%22,color:%22BLACK%20HEATHER%22,item:%226887717"
+// ,name1:"VUORI",name2:"Zephyr Mesh T-Shirt",size:"Small",color:"BLACK HEATHER",item:"6887717",price:54.00,qtn:20}
+// ,{image:"https://n.nordstrommedia.com/id/sr3/3c393ec9-0275-4725-a9f4-39f8008437b4.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",name1:"VUORI",name2:"Zephyr Mesh T-Shirt",size:"Small",color:"BLACK HEATHER",item:"6887717",price:104.00
+// ,qtn:12},{image:"https://n.nordstrommedia.com/id/sr3/3c393ec9-0275-4725-a9f4-39f8008437b4.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",name1:"VUORI",name2:"Zephyr Mesh T-Shirt",size:"Small",color:"BLACK HEATHER",item:"6887717"
+// ,price:64.00,qtn:15},{image:"https://n.nordstrommedia.com/id/sr3/3c393ec9-0275-4725-a9f4-39f8008437b4.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",name1:"VUORI",name2:"Zephyr Mesh T-Shirt",size:"Small",color:"BLACK HEATHER",item:"6887717"
+// ,price:64.00,qtn:15}]
 // var product_bag=[]
+
+var product_bag=JSON.parse(localStorage.getItem("cartList"))
+//console.log(product_bag)
 
 
 
 
 //***********************************************************************************
+
+var sfl_Arr= JSON.parse(localStorage.getItem("sfl_storage"))||[]
+
+document.querySelector("#saveLater").innerText=" Save for Latter ("+sfl_Arr.length+")"
+
+
+obj_total_price={0:2000,1:1347}
+console.log(obj_total_price)
+
+
     if(product_bag.length==0){
         var yourBag=document.createElement("p")
     yourBag.innerText="Your bag is empty"
@@ -392,13 +430,13 @@ var product_bag=[{image:"https://n.nordstrommedia.com/id/sr3/0166a797-049e-4a72-
     h4_cont.innerText="Continue Shopping"
     document.querySelector("#div_1>button").append(h4_cont)
 
+//...............Accepted Payment Methods............................
     var p_accpt=document.createElement("p")
     p_accpt.innerText="Accepted Payment Methods"
     document.querySelector("#div_1").append(p_accpt)
 
     var div_logo=document.createElement("div")
     div_logo.setAttribute("id","logos")
-   // div_logo.innerText="OK DONE"
     document.querySelector("#div_1").append(div_logo)
     
 
@@ -424,6 +462,7 @@ var product_bag=[{image:"https://n.nordstrommedia.com/id/sr3/0166a797-049e-4a72-
    span_shipping.innerText="Shipping internationally?"
    document.querySelector("#logos+p+p").append(span_shipping)
 
+//..............Accepted Payment Methods END................................
 
 //---------------------recent view------------------------------------------
     var recent_view=document.createElement("div")
@@ -465,6 +504,12 @@ var product_bag=[{image:"https://n.nordstrommedia.com/id/sr3/0166a797-049e-4a72-
 
     }
 else{
+
+
+    document.querySelector("#bag_Qn").innerText="Shopping Bag ("+product_bag.length+")"
+
+
+
     var yourBag=document.createElement("p")
     yourBag.innerText="Shopping Bag"
    
@@ -498,7 +543,7 @@ else{
    
 
 
-    product_bag.forEach(function(element){
+    product_bag.forEach(function(element,index){
 
 
     var temp=document.createElement("div")
@@ -519,7 +564,7 @@ else{
 
 
     var card_img=document.createElement("img")
-    card_img.setAttribute("src",element.image)
+    card_img.setAttribute("src",element.img)
     product_card.append(card_img)
 
     var box=document.createElement("div")
@@ -527,9 +572,9 @@ else{
 
 
     var product_name1=document.createElement("p")
-    product_name1.innerText=element.name1;
+    product_name1.innerText=element.brand;
     var product_name2=document.createElement("p")
-    product_name2.innerText=element.name2;
+    product_name2.innerText=element.name;
 
     var size=document.createElement("p")
     size.innerText="Size"+element.size;
@@ -557,10 +602,11 @@ else{
 
     var p_qty=document.createElement("h3")
     p_qty.innerText="Qty"
-    var slt=document.createElement("select")
-    qty_div.append(p_qty,slt)
 
-   console.log(slt.value)
+
+    var slt=document.createElement("select")
+    slt.setAttribute("id","value1")
+    qty_div.append(p_qty,slt)
 
     for(i=1;i<=element.qtn;i++){
         var option=document.createElement("option")
@@ -568,12 +614,47 @@ else{
         option.innerText=i;
         slt.append(option)
     }
+
+
+    slt.addEventListener("click",myfun)
+ //***************************************************************************************************************
+ 
+  var bag=0;
+  sum_obj=0
+  function myfun(){
+      
+      var b=slt.value
+      p_rice.innerText="$"+b*sum
+      
+      if(b!=1){
+        bag=bag+b*sum
+      bag=bag+Number(b)
+
+      
+    for(var k in obj_total_price ){
+        sum_obj=sum_obj+obj_total_price[k]
+        Subtotal_price.innerText="$"+ sum_obj 
+    }
+
+
+
+                //bag
+
+      obj_total_price[index]=b*sum
+      console.log(obj_total_price)
+      
+      }
+      
+  }
+
+ 
+
     
     var p_rice=document.createElement("h4")
-    var sum=Number(element.price)*Number(slt.value)                //PRICE
-    p_rice.innerText="$"+ sum
+    var sum=Number(element.price)        //PRICE
+    p_rice.innerText="$"+sum
     price_div.append(p_rice)
-
+//***************************************************************************************************************
 
     temp.append(product_div_2)
 
@@ -591,16 +672,21 @@ else{
 
     var p_remove =document.createElement("p")
     p_remove.innerText="Remove"
+    p_remove.addEventListener("click",function(){
+
+        deleteItem(element,index)                                    //7777777777777777777777777777
+    })
+
+    
+
     var sfl=document.createElement("p")
     sfl.innerText="Save For Later"
     remove_div.append(p_remove,sfl)
+    sfl.addEventListener("click",function(){
 
-
-
-
-   
-
-
+        saveForLater (element)
+    })
+    
 
    })
 
@@ -662,8 +748,22 @@ var recent_view=document.createElement("div")
     var subtotal=document.createElement("p")
     subtotal.innerText="Subtotal"
 
+  
+   for(var i=0;i<product_bag.length;i++)
+   {
+
+       bag2=bag2+Number(product_bag[i].price)              ////******TOTAL PRICE
+       
+   }
+
+   var bag2=0;
+//..................
+   for(var k in obj_total_price ){
+    bag2=bag2+obj_total_price[k]
+    }
+//.............................
     var Subtotal_price=document.createElement("h4")
-    Subtotal_price.innerText="$44.00"
+    Subtotal_price.innerText="$"+ bag2                             /////////total
     
     t_price.append(subtotal,Subtotal_price)
      
@@ -680,7 +780,7 @@ var recent_view=document.createElement("div")
 
     var div_logo=document.createElement("div")
     div_logo.setAttribute("id","logos")
-   // div_logo.innerText="OK DONE"
+
    pay_method_div.append(div_logo)
     
 
@@ -689,29 +789,45 @@ var recent_view=document.createElement("div")
         img_logo.setAttribute("src",element.image)
        div_logo.append(img_logo)
     })
-//..........................................................................
+
     var p_help=document.createElement("p")
    p_help.innerText="Need help? Call 1.888.282.6060 or "
-   div_logo.append(p_help)
+   pay_method_div.append(p_help)
 
    var span_help=document.createElement("span")
    span_help.innerText="chat with us"
-   document.querySelector("#div_logo").append(span_help)
-
-   var p_shipping=document.createElement("p")
-   //p_shipping.innerText="Shipping internationally?"
-   document.querySelector("#div_logo").append(p_shipping)
+   p_help.append(span_help)
 
    var span_shipping=document.createElement("span")
    span_shipping.innerText="Shipping internationally?"
-   div_logo.append(span_shipping)
+   pay_method_div.append(span_shipping)
 
 
 }
 
 
-  
+  function sum1(x){
+      return x*100
+  }
 
+
+//----------deleteItem-------
+
+function deleteItem(element,index) {
+    product_bag.splice(index,1)
+    localStorage.setItem("cartList",JSON.stringify(product_bag))
+    window.location.reload()
+}
+
+//-----save for latter--------
+
+
+function  saveForLater (element){
+    
+    sfl_Arr.push(element)
+    localStorage.setItem("sfl_storage",JSON.stringify(sfl_Arr))
+    alert("Item Saved Successfully")
+}
 
 
 
