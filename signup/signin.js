@@ -1,7 +1,7 @@
 document.querySelector("#emailForm").addEventListener("submit", nextFunction)
 
 var windowsize = window.innerWidth;
-console.log(windowsize)
+// console.log(windowsize)
 if(windowsize < 750) {
     document.querySelector("#nav").innerHTML = `<input type="search" placeholder="Search for product or brands">`
 
@@ -17,6 +17,8 @@ function nextFunction () {
         if(arr !== null) {
             for(var i = 0; i < arr.length; i++) {
                 if(arr[i].userEmail == Email) {
+                    localStorage.setItem("userEmail", JSON.stringify(Email))
+                    localStorage.setItem("userName", JSON.stringify(arr[i].userFirstName))
                     window.location.href = "signin2.html"
                     // console.log("1")
                     break;

@@ -136,6 +136,27 @@ body {
 #footer>div p:hover {
     text-decoration: underline 2px;
 }
+#smDiv {
+    display: flex;
+    flex-direction: column;
+}
+#smDiv > div:nth-child(1){
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#smDiv > div:nth-child(1) img {
+    height: 25px;
+
+}
+#smDiv > div:nth-child(2) img {
+    height: 25px;
+    margin: 5px;
+    
+}
+#smDiv > div:nth-child(2) img:nth-child(5) {
+    height: 20px;
+    margin-bottom: 10px;
+}
 
 @media all and (min-width: 451px) and (max-width:750px) {
     #container {

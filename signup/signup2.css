@@ -5,6 +5,16 @@
 #navContainer hr {
     margin-top: 10px;
 }
+/* changes */
+#navContainer a {
+    text-decoration: none;
+    color: black;
+}
+#shopNowBtn a {
+    text-decoration: none;
+    color: black;
+}
+/* end */
 
 body {
     padding: 0px;
@@ -196,6 +206,27 @@ body {
 #footer a {
     text-decoration: none;
     color: black;
+}
+#smDiv {
+    display: flex;
+    flex-direction: column;
+}
+#smDiv > div:nth-child(1){
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#smDiv > div:nth-child(1) img {
+    height: 25px;
+
+}
+#smDiv > div:nth-child(2) img {
+    height: 25px;
+    margin: 5px;
+    
+}
+#smDiv > div:nth-child(2) img:nth-child(5) {
+    height: 20px;
+    margin-bottom: 10px;
 }
 @media all and (min-width: 751px) and (max-width:900px) {
     #container {

@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+    width: 95%;
+    margin: auto;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+#uper {
+    background-color: black;
+    width: 100%;
+    height: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#headnav {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#headnav>input {
+    height: 45px;
+    /* margin-top: 20px; */
+    width: 50%;
+}
+
+#headnav>img {
+    height: 45px;
+}
+
+#headnav>p {
+    margin-left: 250px;
+}
+
+#nav {
+    /* border: 1px solid red; */
+    width: 100%;
+    padding: 0px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+​
+
+#nav a {
+    text-decoration: none;
+    color: rgb(65, 65, 65);
+}
+.cat{
+    /* border: 1px solid teal; */
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 155px;
+}
+#nav :hover .cat{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    background-color: white;
+    padding: 30px;
+   
+}
+.cat>div{
+    /* border: 1px solid green; */
+    width: 16%;
+    margin: 0px;
+    margin-top: 0px;
+    font-family: Brandon Text,Arial,sans-serif;
+    cursor: pointer;
+}
+.cat>div>p{
+    color: #393939;
+}
+.cat>div>img:nth-child(1){
+    /* border: 1px solid black; */
+    width: 20%;
+    margin-left: 75%;
+}
+.cat>div>img:nth-child(2){
+    width: 100%;
+}
+.cat>div>h4:hover,.cat>div>p:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    border-color: black;
+    color: darkorange;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#prd{
+    display: grid;
+    grid-template-columns: 60% 29% 10%;
+    grid-template-rows: repeat(1, 700px);
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+#prd div{
+    border: 0px solid;
+}
+.imgdiv>img{
+    width: 50%;
+}
+.imgdiv{
+    display: flex;
+}
+#sk{
+    width: 100%;
+    height: 40px;
+}
+#clr img{
+    border-radius: 50%;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+#clr img:hover{
+    border-radius: 50%;
+    margin-top: 30px;
+    border: 3px solid darkorange;
+}
+#btn{
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    color: white;
+}
+#prd2{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.pic{
+    width: 80%;
+    justify-content: center;
+    text-align: center;
+    
+}
+.red{
+    color: red;
+}
+.logo{
+    width: 40%;
+}
+.xx{
+    width: 60%;
+}
+    </style>
+</head>
+<body>
+    <div id="uper">
+        <p><b>Shipping outside of the U.S. or Canada?</b></p>
+        <p><u> Learn About International Shipping</u></p>
+    </div>
+    <div id="container">
+        <div id="headnav">
+            <h1>NORDSTROM</h1>
+            <input type="search" placeholder="Search for product or brands">
+            <p>sign up</p>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIEAAACBCAMAAADQfiliAAAAY1BMVEX///8AAACAgIDo6OhlZWW3t7d3d3ekpKSqqqqJiYn19fX5+fnw8PBCQkLY2Ni8vLzLy8sWFhbh4eE2NjZubm5WVlaXl5fDw8OPj48jIyMaGhrS0tKenp4vLy8QEBA8PDxNTU2nofFuAAAFxklEQVR4nO1b26KjIAy03u9a673a+v9fuR53j0QlQtDal51XRUaBYRKipv3HBD80Vgj9SwmUzW0L27is/zDi9P+D9CoGNkLg1gTXEDDuGIObdQ2DCiVwy7/O4HXNgohxBlfNRWwpjNCvYfDEGQwX6dIT/wrxNQw0v6o9gIEx6C5isIIFhuE7DHzGoM2+Q6FgFC6SxTU6xuAiWVwDitR3GGjAL1y2RS+hMwb1dxiA3arXPwfPCjEGRo8r9alo0EHOL2KAzzNL3PQkRNgwXMYA2/yCQtz0JCTIR+jETU8CNhH2vNupuKN73+siBj0alOjixqdgwAjsmfhTUaIMQjAM6TqyniPsKeIrN5H3z6UcvWQY4ANXKANoU1z0pulRDveSvdPSnB/92vHCLmNgnszAZ+b8je5NmpaxiPaO3qbGIAMvtxOfB8C0o4OlxiBlT/ZwAppWs/vscxmAJ+86YSCLETYMagzYRLztporCB7sRE28lBmAiCvIDYNViuqHEIGNGGF9lExIwDGcyAHIrSA+A6A3bwZQYAKURhWRiWVRiACaiKDvgsFuRAVNi0LLHCggsbApfu1QYGGzPu4sYaGA98mVRhQFQRFTpZniiWavCAIwtvyVCN+IOgwoDkEUWh8Xhm91dmBxM0V3Eu4JfYnrUSGRo0Kz3KXhLpM4/G70JNHnCZ6M3qVyhKX6OOqTyM2DpRIm1RjIRtLcXxkuTpOvbS2xrlksVAkvHi26m1cjfM5DV6LPlJZm1BkktjizS9QAovWSmcF8W6QyA6cDDpQVgUusMBnLhEkQIhmE7c+gMgOfYCVYWAOtxu37JDID9bWUPE4EsFscZxMyeyCjiBBi9bdw9mQF4H/ls7V6un8ygZA/DUlhbgEabFUxmAF5H/gwLaMgm1iYzAEfM0gQ0fyd6ozIAIv+QZwBlcT17qAyAvu3G7XiztzqDIAzjCnguPDW0RcCaraePDIPAyFLH04vHoszg9SQwgLK46k3EIPfMiFdiMrpUUpEJCDVXsshhEBhx6ta6ye94xkAhoGUgt7h0FYxBEBpxZZV5EcmdzxCPEUFSa6lk0zKp086zi0eLdcYFZSJqC1mcbYqfpZazU7sgAPFUH5QoPOJpmIu+PZR9R3NjCGDJkmCGSUJ+W/qHs3P94qB5jUT8UFm8HmatUNoRHu/5UZi6k6RGoFjppXr29mr6Ife6Ks7CYzVmmbivNZooL63kafjnVLfJ5xFeb9MrrfGVT+l3RoZXz80dF6bnWulZr7yGg3bc9EXuOdXp77zGsO27iczOquKLqknh3hjlepk8s2vLWJkeleGHhlmEeRp8qT6KnQvxs5oogiDM4jSxXMfpurKsf1CWnUNyiH/xuy9tI1cI38ieaWU5tW7nZtTvbN4FuRD516DcVwGLH46dVpbb6fnwfveNUDXm6UxlMDvVe+7GmZHFz6QbX7SIHvKdLkEdiPPLIcj+QN0OIiCX/J1oUP6CXhN/co5dofjUPz4Or3vbtvefNRqRbSrxKzRRkee2VzpWUqXPce0cdEczKsyotY93NHrAeuwyjQ0j/NzeETzrYY7MXn00mHppjW85vuSF+1WYjTo/vmpmfGeP/I+vw6/c0kkUPYqR/DQ+5Gbj37rRt0IVd/XrdAvl2uOgBH6jIH6HEJ7X6YrfYSmItHL61e9ShRKFtSJTMnGbHWVQILA9+pU+nODlPiQPuADACeEMyUMqvr0ijwOvVlL6I3icxmSLxsshvWTfg+dkC+KeEnDCVvmzQl7b/kAmj0FSl/gumyoonIkozYD/txaRAd8iSlo9bgUFLbGvIX8SyL4Gry35XzWX8xDpwI9Xw0E5YZrA+5LShp8X69AzquXmGYT1tHXYBEmfsVkN0qI8rse1JrUqfzHHq4MbkqyuxqFVMynZggLxgGaxr9AO+SCc2STl5K/os53lyP9ZfqIXQ5GXSv+ih649Nrbdo4nX4Ehwdqjxh/EHeMxLCLCdBUMAAAAASUVORK5CYII="
+                alt="cart logo">
+        </div>
+        <hr>
+        <ul id="nav">
+            <li><a href="">Sale</a>
+            <div class="cat">
+                <div>
+                    <h4>Sale: Get Inspired</h4>
+                    <hr style="margin-top: -10px;margin-bottom: 0px; border-top: 0.5px solid rgb(253, 249, 249);">
+                    <h4>Bestsellers</h4>
+                    <h4>New Markdowns</h4>
+                    <h4>Price Matched</h4>
+                    <h4>Nordstrom Made Sale</h4>
+                    <h4>Men's Designer Sale</h4>
+                    <h4>Women's Designer Sale</h4>
+                 </div>
+                 <div>
+                    <h4>Women</h4>
+                    <p>New Markdowns</p>
+                    <p>Clothing</p>
+                    <p>Shoes</p>
+                    <p>Handbags & Wallets</p>
+                    <p>Jewelry</p>
+                    <p>Accessories</p>
+                    <p>Beauty</p>
+                    <p>Contemporary</p>
+                    <p>Designer</p>
+                    <p>Plus</p>
+                    <p>Petite</p>
+                    <p>Maternity</p>
+                    <p>Juniors</p>
+                 </div>
+                 <div>
+                    <h4>Men</h4>
+                    <p>New Markdowns</p>
+                    <p>Clothing</p>
+                    <p>Shoes</p>
+                    <p>Accessories</p>
+                    <p>Grooming & Cologne</p>
+                    <p>Contemporary</p>
+                    <p>Designer</p>
+                    <h4>Designer</h4>
+                    <p>Women</p>
+                    <p>Men</p>
+                    <p>Kids</p>
+                 </div>
+                 <div>
+                   <h4>Kids</h4>
+                   <p>New</p>
+                   <p>Markdowns</p>
+                   <p>Girls</p>
+                   <p>Boys</p>
+                   <p>Baby Sale Clothing, Shoes & Accessories</p>
+                   <p>Baby Gear & Essentials</p>
+                   <p>Shoes</p>
+                   <h4>Young Adult</h4>
+                   <p>Women</p>
+                   <p>Men</p>
+                   <p>Gender Inclusive</p>
+                 </div>
+                 <div>
+                 <h4>Home</h4>
+                 <p>Bedding & Bath</p>
+                 <p>Home Decor</p>
+                 <p>Electronics & Tech</p>
+                 <p>Accessories</p>
+                 <p>Luggage & Travel</p>
+                 <p>Tabletop & Kitchen</p>
+                 <h4>Beauty</h4>
+                 <h4>All Sale</h4>
+                 </div>
+                 <div>
+                     <img class="cut-img" src="https://as1.ftcdn.net/v2/jpg/03/11/74/34/1000_F_311743449_H2xbYofvYIrhjLC8xIm2fq7oAPXasPFz.jpg" alt="">
+                     <img class="price-match-img" src="https://n.nordstrommedia.com/id/17470a54-453d-4e87-80ac-97247458ceaf.jpg" alt="">
+                     <p>Shop Price Matched</p>
+                 </div>
+
+
+            </div>
+            
+            
+            
+            </li>
+            <li><a href="">Woman</a>
+                <div class="cat">
+                 
+                    <div>
+                        <h4 >Women: Get Inspired</h4>
+                        <hr style="margin-top: -10px;margin-bottom: 0px; border-top: 0.5px solid rgb(253, 249, 249);">
+                        <h4>New Arrivals</h4>
+                        <h4>ASOS</h4>
+                        <h4>Black-Owned & -Founded Brands</h4>
+                        <h4>Contemporary</h4>
+                        <h4>Nordstrom Made</h4>
+                        <h4>Pop-In for Gifts</h4>
+                        <h4>@Nordstrom</h4>
+                        <h4>Shop by Trend</h4>
+                        <h4>Sports Fan Shop</h4>
+                        <h4>Sustainable</h4>
+                    </div>
+                    <div>
+                        <h4>Clothing</h4>
+                        <p>Activewear</p>
+                        <p>Blazers</p>
+                        <p>Coat & Jackets</p>
+                        <p>Dresses</p>
+                        <p>Jeans & Denim</p>
+                        <p>Lingerie, Hosiery & Shapwear</p>
+                        <p>Longuewear</p>
+                        <p>Pants & Leggings</p>
+                        <p>Shorts</p>
+                        <p>Skirts</p>
+                        <p>Sleepwear & Robes</p>
+                        <p>Sweaters</p>
+                    </div>
+                    <div>
+                        <h4>Shoes</h4>
+                        <p>Booties</p>
+                        <p>Boots</p>
+                        <p>Clogs</p>
+                        <p>Comfort</p>
+                        <p>Dress Shoes</p>
+                        <p>Espadrilles</p>
+                        <p>Flats</p>
+                        <p>Heels</p>
+                        <p>Mules & Slides</p>
+                        <p>Oxfords & Loafers</p>
+                        <p>Running Shoes</p>
+                        <p>Sandals</p>
+                        <p>Shoes Care & Accessories</p>
+                        <p>Slippers</p>
+                    </div>
+                    <div>
+                        <h4>Handbags</h4>
+                        <p>Backpacks</p>
+                        <p>Belt Bags</p>
+                        <p>Bucket Bags</p>
+                        <p>Camera Bags</p>
+                        <p>Clutches & Pouches</p>
+                        <p>Crossbody Bags</p>
+                        <p>Designer Bags</p>
+                        <p>Satchels</p>
+                        <p>Shoulder Bags</p>
+                        <p>Straw Bags</p>
+                        <p>Tote Bags</p>
+                        <p>Wallets & Card Cases</p>
+                    </div>
+                    <div>
+                        <h4>Jewelry</h4>
+                        <p>Bracelets</p>
+                        <p>Earrings</p>
+                        <p>Necklaces</p>
+                        <p>Rings</p>
+                        <p>Watches</p>
+                        <h4>Fine Jewelry</h4>
+                        <p>Experience</p>
+                        <p>Fine Jewelry</p>
+                        <h4>Accessories</h4>
+                        <p>Belts</p>
+                        <p>Hair</p>
+                        <p>Accessories</p>
+                        <p>Hats</p>
+                        <p>Hijabs and Headscarves</p>
+                        <p>Scarves & Wraps</p>
+                    </div>
+                    <div>
+                        <img class="cut-img" src="https://as1.ftcdn.net/v2/jpg/03/11/74/34/1000_F_311743449_H2xbYofvYIrhjLC8xIm2fq7oAPXasPFz.jpg" alt="">
+                        <img class="price-match-img" src="https://images.dashhudson.com/aHR0cHM6Ly9jZG4uZGFzaGh1ZHNvbi5jb20vbWVkaWEvZnVsbC8xNjUwNDcyNjY2LjU2NTExODg4NTEwNi5qcGVn.jpg?w=640&h=640&fit=cover" alt="">
+                        <p>Occasion Wear</p>
+                    </div>
+              
+
+                </div>
+            
+            </li>
+            <li><a href="">Men</a>
+                <div class="cat">
+                    <div>
+                        <h4>Men: Get Inspired</h4>
+                        <hr style="margin-top: -10px;margin-bottom: 0px; border-top: 0.5px solid rgb(253, 249, 249);">
+                        <h4>New Arrivals</h4>
+                        <h4>Advanced Modern</h4>
+                        <h4>ASOS</h4>
+                        <h4>Black-Owned & -Founded Brands</h4>
+                        <h4>Bestsellers</h4>
+                        <h4>Men's Looks</h4>
+                        <h4>Men's Wedding Grest Attire</h4>
+                        <h4>New Concepts: PANGAIA</h4>
+                        <h4>Sustainable Style</h4>
+                        <h4>Nordstrom Made</h4>
+                        <h4>Sports Fan Shop</h4>
+                        <h4>TOPMAN</h4>
+                        <h4>Shop by Occasion</h4>
+                     </div>
+                     <div>
+                        <h4>Clothing</h4>
+                        <p>Activewear</p>
+                        <p>Blazer &Sport Coats</p>
+                        <p>Coats & Jackets</p>
+                        <p>Dress Shirts</p>
+                        <p>Jeans</p>
+                        <p>Joggers & Sweatpants</p>
+                        <p>Lounge, Pajamas & Robes</p>
+                        <p>Pants</p>
+                        <p>Polo Shirts</p>
+                        <p>Shirts</p>
+                        <p>Shorts</p>
+                        <p>Socks</p>
+                        <p>Suits & Separates</p>
+                        <p>Sweaters</p>
+                        <p>Sweaters & Hoodies</p>
+                        <p>Swimwear & Board Shorts</p>
+                        <p>T-Shirts</p>
+                     </div>
+                     <div>
+                        <h4>Shoes</h4>
+                        <p>Boots</p>
+                        <p>Comfort</p>
+                        <p>Dress Shoes</p>
+                        <p>Loafers & Slip-Ons</p>
+                        <p>Oxfords & Derbys</p>
+                        <p>Running Shoes</p>
+                        <p>Sandals & Flip-Flops</p>
+                        <p>Shoe Care & Accessories</p>
+                        <p>Slippers</p>
+                        <p>Sneakers  Athletic</p>
+                        <p>Sneakers Release Calender</p>
+                     </div>
+                     <div>
+                      <h4>Accessories</h4>
+                      <p>Backpacks</p>
+                      <p>Bags</p>
+                      <p>Belts</p>
+                      <p>Hats</p>
+                      <p>Headphones</p>
+                      <p>Phone-Cases</p>
+                      <p>Scarves</p>
+                      <p>Sunglasses & Eyewear</p>
+                      <p>Ties & Pocket Squares</p>
+                      <p>Wallets & Card Cases</p>
+                      <h4>Luggage & Travel</h4>
+                      <h4>Jewelry</h4>
+                      <p>Fine Jewelry</p>
+                      <p>Watches</p>
+                     </div>
+                     <div>
+                     <h4>Designer</h4>
+                     <p>Designer Clothing</p>
+                     <p>Designer Shoes</p>
+                     <p>Designer Accessories</p>
+                     <h4>Big & Tall</h4>
+                     <p>Clothing</p>
+                     <p>Jeans</p>
+                     <p>Pants</p>
+                     <p>Shirts</p>
+                     <h4>Grooming & Cologne</h4>
+                     <p>Body Care & Deodorant</p>
+                     <p>Cologne</p>
+                     <p>Dopp Kits & Toiletry Bags</p>
+                     <p>Gifts & Sets</p>
+                     <p>Hair Products</p>
+                     <p>Skin Care</p>
+                     <p>Shaving & Beard Care</p>
+                     </div>
+                     <div>
+                         <img class="cut-img" src="https://as1.ftcdn.net/v2/jpg/03/11/74/34/1000_F_311743449_H2xbYofvYIrhjLC8xIm2fq7oAPXasPFz.jpg" alt="">
+                         <img class="price-match-img" src="	https://n.nordstrommedia.com/id/e4b69241-ac7d-461a-b577-5871b9bdf7a9.jpg" alt="">
+                         <p>Occasion Wear</p>
+                     </div>
+
+
+                </div>
+            
+            </li>
+            <li><a href="">Kids</a>
+                <div class="cat">
+                    <!-- <div id="kids"> -->
+                        <div>
+                           <h4>Kids: Get Inspired</h4>
+                           <hr style="margin-top: -10px;margin-bottom: 0px; border-top: 0.5px solid rgb(253, 249, 249);">
+                          <h4>New Arrivals</h4>
+                          <h4>Baby Shower Gifts</h4>
+                          <h4>Black-Owned & -Founded Brands</h4>
+                          <h4>Camp Nordy</h4>
+                          <h4>Designer</h4>
+                          <h4>Everyday Basics</h4>
+                          <h4>Kids Looks</h4>
+                          <h4>Matching Basics</h4>
+                          <h4>Kids Looks</h4>
+                          <h4>Matching Family Moments</h4>
+                          <h4>Nordstrom Made</h4>
+                          <h4>Sports Fan Shop for Kids</h4>
+                          <h4>Sustainable Style</h4>
+                          <h4>Shop by Occasion</h4>
+                          <p>Vacation</p>
+                        </div>
+                        <div>
+                           <h4>Kid's Clothing</h4>
+                           <p>Activewear</p>
+                           <p>Coats & Jackets</p>
+                           <p> Jeans & Denim</p>
+                           <p>Leggings & Pants</p>
+                           <p>Pajamas & Robes</p>
+                           <p>Shirts</p>
+                           <p>Shorts</p>
+                           <p>Sweaters</p>
+                           <p>Swimwear</p>
+                           <h4>Kid's Accessories</h4>
+                           <h4>Kid's Shoes</h4>
+                           <p>Toddler (Sizes 7.5-12)</p>
+                           <p>Little Kid (Sizes 12.5-3)</p>
+                           <p>Big Kid (Sizes 3.5-7)</p>
+                           <h4>Toy Shop</h4>
+                        </div>
+                        <div>
+                           <h4>Girls Clothing</h4>
+                           <p>Sizes 2T-6X</p>
+                           <p>Sizes 7-16</p>
+                           <p>Tween</p>
+                           <p>Activewear</p>
+                           <p>Coats & Jackets</p>
+                           <p>Dresses & Rompers</p>
+                           <p>Jeans & Denim</p>
+                           <p>Leggings & Pants</p>
+                           <p>Pajamas & Robes</p>
+                           <p>Shorts</p>
+                           <p>Sweaters</p>
+                           <p>Swimwear & Cover-ups</p>
+                           <p>Tops</p>
+                           <p>Underwear, Bras & Socks</p>
+                           <h4>Girls Accessories</h4>
+                           <h4>Girls Shoes</h4>
+                        </div>
+                        <div>
+                           <h4>Boys Clothing</h4>
+                           <p>Sizes 2T-7</p>
+                           <p>Sizes 8-20</p>
+                           <p>Tween</p>
+                           <p>Activewear</p>
+                           <p>Coats & Jackets</p>
+                           <p>Dresses & Rompers</p>
+                           <p>Jeans & Denim</p>
+                           <p>Leggings & Pants</p>
+                           <p>Pajamas & Robes</p>
+                           <p>Shorts</p>
+                           <p>Suits & Separates</p>
+                           <p>Sweaters & Sweatershirts</p>
+                           <p>Swim Trunks & Rashguards</p>
+                           <p>Underwear & Socks</p>
+                           <h4>Boys Accessories</h4>
+                           <h4>Boys Shoes</h4>
+                        </div>
+                        <div>
+                        <h4>Baby Clothing</h4>
+                        <p>Baby Girl Clothing</p>
+                        <p>Baby Boy Clothing</p>
+                        <p>Gender Neutral Baby Clothing</p>
+                        <h4>Baby Gear & Essentials</h4>
+                        <p>Baby Carriers</p>
+                        <p>Bath & Safety</p>
+                        <p>Blankets & Swaddles</p>
+                        <p>Car Seats</p>
+                        <p>Diaper Bags</p>
+                        <p>Feeding</p>
+                        <p>High Chairs</p>
+                        <p>Nursery & Decor</p>
+                        <p>Strollers</p>
+                        <h4>Baby Accessories</h4>
+                        <h4>Baby & Walker Shoes</h4>
+                        </div>
+                        <div>
+                            <img class="cut-img" src="https://as1.ftcdn.net/v2/jpg/03/11/74/34/1000_F_311743449_H2xbYofvYIrhjLC8xIm2fq7oAPXasPFz.jpg" alt="">
+                            <img class="price-match-img" src="https://n.nordstrommedia.com/id/3b68fd08-e33d-4314-8379-b01476d7179f.jpg
+                            " alt="">
+                            <p>kids</p>
+                        </div>
+
+
+                </div>
+            
+            </li>
+            <li><a href="">Young Adult</a>
+                <div class="cat">
+                    <div>
+                        <h4>Young Adult: Get Inspired</h4>
+                        <hr style="margin-top: -10px;margin-bottom: 0px; border-top: 0.5px solid rgb(253, 249, 249);">
+                        <h4>New Arrivals</h4>
+                        <h4>ASOS</h4>
+                        <h4>BP</h4>
+                        <h4>Graphic Tees</h4>
+                        <h4>Goodfair Vintage</h4>
+                        <h4>Inclusive Brands</h4>
+                        <h4>Jeans & Denim Shop</h4>
+                        <h4>Sports Fan Shop</h4>
+                        <h4>Surf & Swim Shop</h4>
+                        <h4>Sustainable Style</h4>
+                        <h4>The Ambassador Program</h4>
+                        <h4>Trending Now: Retro Resort</h4>
+                        <h4>Shop by Occasion</h4>
+                        <p>Graduation & Party</p>
+                     </div>
+                     <div>
+                        <h4>Women's Clothing</h4>
+                        <p>Coats & Jackets</p>
+                        <p>Dresses</p>
+                        <p>Jeans & Denim</p>
+                        <p>Pants & Leggings</p>
+                        <p>Shorts</p>
+                        <p>Skirts</p>
+                        <p>Sweaters</p>
+                        <p>Sweaters & Hoodies</p>
+                        <p>Swimsuits & Cover-Ups</p>
+                        <p>Tops</p>
+                        <p>Underwear, Bras & Socks</p>
+                        <p>Plus-Size Clothing</p>
+                        <h4>Women's Shoes</h4>
+                        <p>Heels</p>
+                        <p>Sandals</p>
+                        <p>Sneakers & Athletic</p>
+                     </div>
+                     <div>
+                        <h4>Men's Clothing</h4>
+                        <p>Coats & Jackets</p>
+                        <p>Jeans & Denim</p>
+                        <p>Joggers & Sweatpants</p>
+                        <p>Lounge, Pajamas & Robes</p>
+                        <p>Pants</p>
+                        <p>Shirts</p>
+                        <p>Shorts</p>
+                        <p>Sweaters</p>
+                        <p>Sweaters & Hoodies</p>
+                        <p>Swimwear & Board Shorts</p>
+                        <p>T-Shirts</p>
+                        <p>Underwear, Boxeers & Socks</p>
+                        <h4>Men's Shoes</h4>
+                        <p>Sandals</p>
+                        <p>Sneakers & Athletic</p>
+                     </div>
+                     <div>
+                       <h4>Gender Inclusive</h4>
+                       <p>Clothing</p>
+                       <p>Accessories</p>
+                       <p>Shoes</p>
+                       <h4>Accessories</h4>
+                       <p>Bags & Backpacks</p>
+                       <p>Hats & Beanies</p>
+                       <p>Jewelry</p>
+                       <p>Sunglasses & Eye wear</p>
+                       <h4>Beauty</h4>
+                       <p>Gifts & Sets</p>
+                       <p>Hair Care </p>
+                       <p>Makeup</p>
+                       <p>Nail Polish</p>
+                       <p>Skin Care</p>
+                       <p>Sustainable Beauty</p>
+                     </div>
+                     <div>
+                     <h4>Top Brands</h4>
+                     <p>BDG Urban Outfitters</p>
+                     <p>Billabong</p>
+                     <p>Billabong Sea Through Me</p>
+                     <p>BP BE PROUD</p>
+                     <p>BP. + WILDFANG</p>
+                     <p>BTS Themed Merch</p>
+                     <p>Cross Colours</p>
+                     <p>iets frans</p>
+                     <p>Lulus</p>
+                     <p>Nike</p>
+                     <p>O'Neill</p>
+                     <p>PacSun</p>
+                     <p>The Phluid Project</p>
+                     <p>Vans </p>
+                     <p>VERO MODA</p>
+                     </div>
+                     <div>
+                         <img class="cut-img" src="https://as1.ftcdn.net/v2/jpg/03/11/74/34/1000_F_311743449_H2xbYofvYIrhjLC8xIm2fq7oAPXasPFz.jpg" alt="">
+                         <img class="price-match-img" src="https://n.nordstrommedia.com/id/fd0a6579-5f81-4181-9e25-32793aa8e0a3.jpg
+                         " alt="">
+                         <p>Sustainable Style</p>
+                     </div>
+
+
+                </div>
+            
+            
+            </li>
+            <li><a href="">Activewere</a>
+                <div class="cat">
+                    <div>
+                        <h4>Sale: Get Inspired</h4>
+                        <hr style="margin-top: -10px;margin-bottom: 0px; border-top: 0.5px solid rgb(253, 249, 249);">
+                        <h4>Bestsellers</h4>
+                        <h4>New Markdowns</h4>
+                        <h4>Price Matched</h4>
+                        <h4>Nordstrom Made Sale</h4>
+                        <h4>Men's Designer Sale</h4>
+                        <h4>Women's Designer Sale</h4>
+                     </div>
+                     <div>
+                        <h4>Women</h4>
+                        <p>New Markdowns</p>
+                        <p>Clothing</p>
+                        <p>Shoes</p>
+                        <p>Handbags & Wallets</p>
+                        <p>Jewelry</p>
+                        <p>Accessories</p>
+                        <p>Beauty</p>
+                        <p>Contemporary</p>
+                        <p>Designer</p>
+                        <p>Plus</p>
+                        <p>Petite</p>
+                        <p>Maternity</p>
+                        <p>Juniors</p>
+                     </div>
+                     <div>
+                        <h4>Men</h4>
+                        <p>New Markdowns</p>
+                        <p>Clothing</p>
+                        <p>Shoes</p>
+                        <p>Accessories</p>
+                        <p>Grooming & Cologne</p>
+                        <p>Contemporary</p>
+                        <p>Designer</p>
+                        <h4>Designer</h4>
+                        <p>Women</p>
+                        <p>Men</p>
+                        <p>Kids</p>
+                     </div>
+                     <div>
+                       <h4>Kids</h4>
+                       <p>New</p>
+                       <p>Markdowns</p>
+                       <p>Girls</p>
+                       <p>Boys</p>
+                       <p>Baby Sale Clothing, Shoes & Accessories</p>
+                       <p>Baby Gear & Essentials</p>
+                       <p>Shoes</p>
+                       <h4>Young Adult</h4>
+                       <p>Women</p>
+                       <p>Men</p>
+                       <p>Gender Inclusive</p>
+                     </div>
+                     <div>
+                     <h4>Home</h4>
+                     <p>Bedding & Bath</p>
+                     <p>Home Decor</p>
+                     <p>Electronics & Tech</p>
+                     <p>Accessories</p>
+                     <p>Luggage & Travel</p>
+                     <p>Tabletop & Kitchen</p>
+                     <h4>Beauty</h4>
+                     <h4>All Sale</h4>
+                     </div>
+                     <div>
+                         <img class="cut-img" src="https://as1.ftcdn.net/v2/jpg/03/11/74/34/1000_F_311743449_H2xbYofvYIrhjLC8xIm2fq7oAPXasPFz.jpg" alt="">
+                         <img class="price-match-img" src="	https://n.nordstrommedia.com/id/5054874d-1b62-44b1-9332-550dbf178377.jpg" alt="">
+                         <p>Shop Price Matched</p>
+                     </div>
+
+
+                </div>
+            
+            </li>
+            <li><a href="">Home</a>
+                <div class="cat">
+                    <div>
+                        <h4>Sale: Get Inspired</h4>
+                        <hr style="margin-top: -10px;margin-bottom: 0px; border-top: 0.5px solid rgb(253, 249, 249);">
+                        <h4>Bestsellers</h4>
+                        <h4>New Markdowns</h4>
+                        <h4>Price Matched</h4>
+                        <h4>Nordstrom Made Sale</h4>
+                        <h4>Men's Designer Sale</h4>
+                        <h4>Women's Designer Sale</h4>
+                     </div>
+                     <div>
+                        <h4>Women</h4>
+                        <p>New Markdowns</p>
+                        <p>Clothing</p>
+                        <p>Shoes</p>
+                        <p>Handbags & Wallets</p>
+                        <p>Jewelry</p>
+                        <p>Accessories</p>
+                        <p>Beauty</p>
+                        <p>Contemporary</p>
+                        <p>Designer</p>
+                        <p>Plus</p>
+                        <p>Petite</p>
+                        <p>Maternity</p>
+                        <p>Juniors</p>
+                     </div>
+                     <div>
+                        <h4>Men</h4>
+                        <p>New Markdowns</p>
+                        <p>Clothing</p>
+                        <p>Shoes</p>
+                        <p>Accessories</p>
+                        <p>Grooming & Cologne</p>
+                        <p>Contemporary</p>
+                        <p>Designer</p>
+                        <h4>Designer</h4>
+                        <p>Women</p>
+                        <p>Men</p>
+                        <p>Kids</p>
+                     </div>
+                     <div>
+                       <h4>Kids</h4>
+                       <p>New</p>
+                       <p>Markdowns</p>
+                       <p>Girls</p>
+                       <p>Boys</p>
+                       <p>Baby Sale Clothing, Shoes & Accessories</p>
+                       <p>Baby Gear & Essentials</p>
+                       <p>Shoes</p>
+                       <h4>Young Adult</h4>
+                       <p>Women</p>
+                       <p>Men</p>
+                       <p>Gender Inclusive</p>
+                     </div>
+                     <div>
+                     <h4>Home</h4>
+                     <p>Bedding & Bath</p>
+                     <p>Home Decor</p>
+                     <p>Electronics & Tech</p>
+                     <p>Accessories</p>
+                     <p>Luggage & Travel</p>
+                     <p>Tabletop & Kitchen</p>
+                     <h4>Beauty</h4>
+                     <h4>All Sale</h4>
+                     </div>
+                     <div>
+                         <img class="cut-img" src="https://as1.ftcdn.net/v2/jpg/03/11/74/34/1000_F_311743449_H2xbYofvYIrhjLC8xIm2fq7oAPXasPFz.jpg" alt="">
+                         <img class="price-match-img" src="https://n.nordstrommedia.com/id/c743f56c-93e7-4232-a882-e1e730777c8c.jpg" alt="">
+                         <p>Shop Price Matched</p>
+                     </div>
+
+
+                </div>
+            
+            
+            </li>
+            <li><a href="">Beauty</a>
+                <div class="cat">
+                    <div>
+                        <h4>Women: Get Inspired</h4>
+                        <hr style="margin-top: -10px;margin-bottom: 0px; border-top: 0.5px solid rgb(253, 249, 249);">
+                        <h4>New Arrivals</h4>
+                        <h4>ASOS</h4>
+                        <h4>Black-Owned & -Founded Brands</h4>
+                        <h4>Contemporary</h4>
+                        <h4>Nordstrom Made</h4>
+                        <h4>Pop-In for Gifts</h4>
+                        <h4>@Nordstrom</h4>
+                        <h4>Shop by Trend</h4>
+                        <h4>Sports Fan Shop</h4>
+                        <h4>Sustainable</h4>
+                    </div>
+                    <div>
+                        <h4>Clothing</h4>
+                        <p>Activewear</p>
+                        <p>Blazers</p>
+                        <p>Coat & Jackets</p>
+                        <p>Dresses</p>
+                        <p>Jeans & Denim</p>
+                        <p>Lingerie, Hosiery & Shapwear</p>
+                        <p>Longuewear</p>
+                        <p>Pants & Leggings</p>
+                        <p>Shorts</p>
+                        <p>Skirts</p>
+                        <p>Sleepwear & Robes</p>
+                        <p>Sweaters</p>
+                    </div>
+                    <div>
+                        <h4>Shoes</h4>
+                        <p>Booties</p>
+                        <p>Boots</p>
+                        <p>Clogs</p>
+                        <p>Comfort</p>
+                        <p>Dress Shoes</p>
+                        <p>Espadrilles</p>
+                        <p>Flats</p>
+                        <p>Heels</p>
+                        <p>Mules & Slides</p>
+                        <p>Oxfords & Loafers</p>
+                        <p>Running Shoes</p>
+                        <p>Sandals</p>
+                        <p>Shoes Care & Accessories</p>
+                        <p>Slippers</p>
+                    </div>
+                    <div>
+                        <h4>Handbags</h4>
+                        <p>Backpacks</p>
+                        <p>Belt Bags</p>
+                        <p>Bucket Bags</p>
+                        <p>Camera Bags</p>
+                        <p>Clutches & Pouches</p>
+                        <p>Crossbody Bags</p>
+                        <p>Designer Bags</p>
+                        <p>Satchels</p>
+                        <p>Shoulder Bags</p>
+                        <p>Straw Bags</p>
+                        <p>Tote Bags</p>
+                        <p>Wallets & Card Cases</p>
+                    </div>
+                    <div>
+                        <h4>Jewelry</h4>
+                        <p>Bracelets</p>
+                        <p>Earrings</p>
+                        <p>Necklaces</p>
+                        <p>Rings</p>
+                        <p>Watches</p>
+                        <h4>Fine Jewelry</h4>
+                        <p>Experience</p>
+                        <p>Fine Jewelry</p>
+                        <h4>Accessories</h4>
+                        <p>Belts</p>
+                        <p>Hair</p>
+                        <p>Accessories</p>
+                        <p>Hats</p>
+                        <p>Hijabs and Headscarves</p>
+                        <p>Scarves & Wraps</p>
+                    </div>
+                    <div>
+                        <img class="cut-img" src="https://as1.ftcdn.net/v2/jpg/03/11/74/34/1000_F_311743449_H2xbYofvYIrhjLC8xIm2fq7oAPXasPFz.jpg" alt="">
+                        <img class="price-match-img" src="	https://n.nordstrommedia.com/id/08f6d611-9f9a-4f0d-b28c-b1f8ed919887.jpg" alt="">
+                        <p>Occasion Wear</p>
+                    </div>
+
+
+                </div>
+            
+            </li>
+            <li><a href="">Designer</a>
+                <div class="cat">
+                    <div>
+                        <h4>Sale: Get Inspired</h4>
+                        <hr style="margin-top: -10px;margin-bottom: 0px; border-top: 0.5px solid rgb(253, 249, 249);">
+                        <h4>Bestsellers</h4>
+                        <h4>New Markdowns</h4>
+                        <h4>Price Matched</h4>
+                        <h4>Nordstrom Made Sale</h4>
+                        <h4>Men's Designer Sale</h4>
+                        <h4>Women's Designer Sale</h4>
+                     </div>
+                     <div>
+                        <h4>Women</h4>
+                        <p>New Markdowns</p>
+                        <p>Clothing</p>
+                        <p>Shoes</p>
+                        <p>Handbags & Wallets</p>
+                        <p>Jewelry</p>
+                        <p>Accessories</p>
+                        <p>Beauty</p>
+                        <p>Contemporary</p>
+                        <p>Designer</p>
+                        <p>Plus</p>
+                        <p>Petite</p>
+                        <p>Maternity</p>
+                        <p>Juniors</p>
+                     </div>
+                     <div>
+                        <h4>Men</h4>
+                        <p>New Markdowns</p>
+                        <p>Clothing</p>
+                        <p>Shoes</p>
+                        <p>Accessories</p>
+                        <p>Grooming & Cologne</p>
+                        <p>Contemporary</p>
+                        <p>Designer</p>
+                        <h4>Designer</h4>
+                        <p>Women</p>
+                        <p>Men</p>
+                        <p>Kids</p>
+                     </div>
+                     <div>
+                       <h4>Kids</h4>
+                       <p>New</p>
+                       <p>Markdowns</p>
+                       <p>Girls</p>
+                       <p>Boys</p>
+                       <p>Baby Sale Clothing, Shoes & Accessories</p>
+                       <p>Baby Gear & Essentials</p>
+                       <p>Shoes</p>
+                       <h4>Young Adult</h4>
+                       <p>Women</p>
+                       <p>Men</p>
+                       <p>Gender Inclusive</p>
+                     </div>
+                     <div>
+                     <h4>Home</h4>
+                     <p>Bedding & Bath</p>
+                     <p>Home Decor</p>
+                     <p>Electronics & Tech</p>
+                     <p>Accessories</p>
+                     <p>Luggage & Travel</p>
+                     <p>Tabletop & Kitchen</p>
+                     <h4>Beauty</h4>
+                     <h4>All Sale</h4>
+                     </div>
+                     <div>
+                         <img class="cut-img" src="https://as1.ftcdn.net/v2/jpg/03/11/74/34/1000_F_311743449_H2xbYofvYIrhjLC8xIm2fq7oAPXasPFz.jpg" alt="">
+                         <img class="price-match-img" src="https://n.nordstrommedia.com/id/3e8d429b-d8f0-4d7e-9218-94c3762c1ecd.jpg" alt="">
+                         <p>Shop Price Matched</p>
+                     </div>
+
+
+                </div>
+            
+            </li>
+            <li><a href="">Gifts</a>
+                <div class="cat">
+                    <div>
+                        <h4>Men: Get Inspired</h4>
+                        <hr style="margin-top: -10px;margin-bottom: 0px; border-top: 0.5px solid rgb(253, 249, 249);">
+                        <h4>New Arrivals</h4>
+                        <h4>Advanced Modern</h4>
+                        <h4>ASOS</h4>
+                        <h4>Black-Owned & -Founded Brands</h4>
+                        <h4>Bestsellers</h4>
+                        <h4>Men's Looks</h4>
+                        <h4>Men's Wedding Grest Attire</h4>
+                        <h4>New Concepts: PANGAIA</h4>
+                        <h4>Sustainable Style</h4>
+                        <h4>Nordstrom Made</h4>
+                        <h4>Sports Fan Shop</h4>
+                        <h4>TOPMAN</h4>
+                        <h4>Shop by Occasion</h4>
+                     </div>
+                     <div>
+                        <h4>Clothing</h4>
+                        <p>Activewear</p>
+                        <p>Blazer &Sport Coats</p>
+                        <p>Coats & Jackets</p>
+                        <p>Dress Shirts</p>
+                        <p>Jeans</p>
+                        <p>Joggers & Sweatpants</p>
+                        <p>Lounge, Pajamas & Robes</p>
+                        <p>Pants</p>
+                        <p>Polo Shirts</p>
+                        <p>Shirts</p>
+                        <p>Shorts</p>
+                        <p>Socks</p>
+                        <p>Suits & Separates</p>
+                        <p>Sweaters</p>
+                        <p>Sweaters & Hoodies</p>
+                        <p>Swimwear & Board Shorts</p>
+                        <p>T-Shirts</p>
+                     </div>
+                     <div>
+                        <h4>Shoes</h4>
+                        <p>Boots</p>
+                        <p>Comfort</p>
+                        <p>Dress Shoes</p>
+                        <p>Loafers & Slip-Ons</p>
+                        <p>Oxfords & Derbys</p>
+                        <p>Running Shoes</p>
+                        <p>Sandals & Flip-Flops</p>
+                        <p>Shoe Care & Accessories</p>
+                        <p>Slippers</p>
+                        <p>Sneakers  Athletic</p>
+                        <p>Sneakers Release Calender</p>
+                     </div>
+                     <div>
+                      <h4>Accessories</h4>
+                      <p>Backpacks</p>
+                      <p>Bags</p>
+                      <p>Belts</p>
+                      <p>Hats</p>
+                      <p>Headphones</p>
+                      <p>Phone-Cases</p>
+                      <p>Scarves</p>
+                      <p>Sunglasses & Eyewear</p>
+                      <p>Ties & Pocket Squares</p>
+                      <p>Wallets & Card Cases</p>
+                      <h4>Luggage & Travel</h4>
+                      <h4>Jewelry</h4>
+                      <p>Fine Jewelry</p>
+                      <p>Watches</p>
+                     </div>
+                     <div>
+                     <h4>Designer</h4>
+                     <p>Designer Clothing</p>
+                     <p>Designer Shoes</p>
+                     <p>Designer Accessories</p>
+                     <h4>Big & Tall</h4>
+                     <p>Clothing</p>
+                     <p>Jeans</p>
+                     <p>Pants</p>
+                     <p>Shirts</p>
+                     <h4>Grooming & Cologne</h4>
+                     <p>Body Care & Deodorant</p>
+                     <p>Cologne</p>
+                     <p>Dopp Kits & Toiletry Bags</p>
+                     <p>Gifts & Sets</p>
+                     <p>Hair Products</p>
+                     <p>Skin Care</p>
+                     <p>Shaving & Beard Care</p>
+                     </div>
+                     <div>
+                         <img class="cut-img" src="https://as1.ftcdn.net/v2/jpg/03/11/74/34/1000_F_311743449_H2xbYofvYIrhjLC8xIm2fq7oAPXasPFz.jpg" alt="">
+                         <img class="price-match-img" src="		https://n.nordstrommedia.com/id/255550df-4b39-4128-9b42-12ea75f8f75a.jpeg" alt="">
+                         <p>Occasion Wear</p>
+                     </div>
+
+
+                </div>
+            
+            </li>
+            <li><a href="">Brands</a>
+                <div class="cat">
+                    <div>
+                        <h4>Sale: Get Inspired</h4>
+                        <hr style="margin-top: -10px;margin-bottom: 0px; border-top: 0.5px solid rgb(253, 249, 249);">
+                        <h4>Bestsellers</h4>
+                        <h4>New Markdowns</h4>
+                        <h4>Price Matched</h4>
+                        <h4>Nordstrom Made Sale</h4>
+                        <h4>Men's Designer Sale</h4>
+                        <h4>Women's Designer Sale</h4>
+                     </div>
+                     <div>
+                        <h4>Women</h4>
+                        <p>New Markdowns</p>
+                        <p>Clothing</p>
+                        <p>Shoes</p>
+                        <p>Handbags & Wallets</p>
+                        <p>Jewelry</p>
+                        <p>Accessories</p>
+                        <p>Beauty</p>
+                        <p>Contemporary</p>
+                        <p>Designer</p>
+                        <p>Plus</p>
+                        <p>Petite</p>
+                        <p>Maternity</p>
+                        <p>Juniors</p>
+                     </div>
+                     <div>
+                        <h4>Men</h4>
+                        <p>New Markdowns</p>
+                        <p>Clothing</p>
+                        <p>Shoes</p>
+                        <p>Accessories</p>
+                        <p>Grooming & Cologne</p>
+                        <p>Contemporary</p>
+                        <p>Designer</p>
+                        <h4>Designer</h4>
+                        <p>Women</p>
+                        <p>Men</p>
+                        <p>Kids</p>
+                     </div>
+                     <div>
+                       <h4>Kids</h4>
+                       <p>New</p>
+                       <p>Markdowns</p>
+                       <p>Girls</p>
+                       <p>Boys</p>
+                       <p>Baby Sale Clothing, Shoes & Accessories</p>
+                       <p>Baby Gear & Essentials</p>
+                       <p>Shoes</p>
+                       <h4>Young Adult</h4>
+                       <p>Women</p>
+                       <p>Men</p>
+                       <p>Gender Inclusive</p>
+                     </div>
+                     <div>
+                     <h4>Home</h4>
+                     <p>Bedding & Bath</p>
+                     <p>Home Decor</p>
+                     <p>Electronics & Tech</p>
+                     <p>Accessories</p>
+                     <p>Luggage & Travel</p>
+                     <p>Tabletop & Kitchen</p>
+                     <h4>Beauty</h4>
+                     <h4>All Sale</h4>
+                     </div>
+                     <div>
+                         <img class="cut-img" src="https://as1.ftcdn.net/v2/jpg/03/11/74/34/1000_F_311743449_H2xbYofvYIrhjLC8xIm2fq7oAPXasPFz.jpg" alt="">
+                        
+                     </div>
+
+
+                </div>
+            
+            </li>
+        </ul>
+    <div id="prd">
+        <div class="imgdiv">
+            <img src="https://n.nordstrommedia.com/id/sr3/008c8bfe-0a54-4ddb-9edb-c94c0be184c2.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196" alt="">
+            <img src="https://n.nordstrommedia.com/id/sr3/f38cda1e-80f1-4911-bc39-648ea33f7093.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196" alt="">
+        </div>
+        <div id="prd2">
+            <p style="font-size: 18px;font-family:sans-serif">Square Neck Puff Sleeve Top</p>
+            <p style="font-size: 12px;font-family:sans-serif; margin-top:-10px;">ASTR THE LABEL</p>
+            <h3 style="font-family:sans-serif;">INR 4,517.07</h3>
+            <p style="font-size: 13px;font-family:sans-serif;">Bring the romance to your OOTD in this charming top styled with pretty puffed sleeves, smocked details and an alluring square neckline.</p>
+            <h5>Fit: True to size</h5>
+            <select name="" id="sk">
+                <option value="">SIZE</option>
+                <option value="">SMALL</option>
+                <option value="">MEDIUM</option>
+                <option value="">LARGE</option>
+                <option value="">X.LARGE</option>
+            </select>
+            <BR></BR>
+            <select name="" id="sk">
+                <option value="">COLOR</option>
+                <option value="">RED</option>
+                <option value="">PINK</option>
+                <option value="">BLUE</option>
+                <option value="">white</option>
+            </select>
+            <div id="clr">
+                <img src="https://n.nordstrommedia.com/id/sr3/a4fbf0ee-11b5-4dc5-b6bd-0c0e6fb65248.jpeg?crop=fit&w=31&h=31" alt="">
+                <img src="https://n.nordstrommedia.com/id/sr3/24975e52-dd68-4c04-8153-01c3acddb984.jpeg?crop=fit&w=31&h=31" alt="">
+                <img src="https://n.nordstrommedia.com/id/sr3/2bd00b4a-7423-4997-b5af-242f809469f5.jpeg?crop=fit&w=31&h=31" alt="">
+                <img src="https://n.nordstrommedia.com/id/sr3/9b9580e5-15ed-491a-a25b-5fd902ac6181.jpeg?crop=fit&w=31&h=31" alt="">
+                <img src="https://n.nordstrommedia.com/id/sr3/c91107bc-dde3-4f8e-960a-049984f5527a.jpeg?crop=fit&w=31&h=31" alt="">
+            </div>
+            <BR></BR>
+            <p style="font-size: 13px;font-family:sans-serif;color: darkorange;">85 people are viewing</p>
+            <button id="btn">Add To Bag</button>
+            <p style="font-size: 13px;font-family:sans-serif;">+ Add to wish list</p>
+        </div>
+        <div>
+            <div>
+                <div>
+                    <img class="pic"
+                        src="https://n.nordstrommedia.com/id/sr3/b367cf51-10f5-4336-b79f-c2604edebe9b.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
+                        alt="">
+                    <p>Dolce Vita</p>
+                    <h6 class="red">INR 4,568.21 - INR 5,465.56</h6>
+                    <p class="red">(Up to 40% Off select items)</p>
+                    <p>INR 10,266.00</p>
+                    <img class="logo"
+                        src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+                        alt="">
+                </div>
+                <div>
+                    <img class="pic"
+                        src="https://n.nordstrommedia.com/id/sr3/03c49be8-0ab0-42d0-aeb4-f772020ea0c2.jpeg?q=45&dpr=2&h=135.8&w=88"
+                        alt="">
+                    <p>Dolce Vita</p>
+                    <h6 class="red">INR 4,568.21 - INR 5,465.56</h6>
+                    <p class="red">(Up to 40% Off select items)</p>
+                    <p>INR 10,266.00</p>
+                    <img class="logo"
+                        src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+                        alt="">
+                </div>
+                <div>
+                    <img class="pic"
+                        src="https://n.nordstrommedia.com/id/sr3/8639622b-d761-41a4-b1fb-500c0718b2e8.jpeg?q=45&dpr=2&h=135.8&w=88"
+                        alt="">
+                    <p>Dolce Vita</p>
+                    <h6 class="red">INR 4,568.21 - INR 5,465.56</h6>
+                    <p class="red">(Up to 40% Off select items)</p>
+                    <p>INR 10,266.00</p>
+                    <img class="logo"
+                        src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+                        alt="">
+                </div>
+                <div>
+                    <img class="pic"
+                        src="https://n.nordstrommedia.com/id/sr3/f2ffbf12-506c-479e-8b51-34bc6e2a447e.jpeg?q=45&dpr=2&h=135.8&w=88"
+                        alt="">
+                    <p>Dolce Vita</p>
+                    <h6 class="red">INR 4,568.21 - INR 5,465.56</h6>
+                    <p class="red">(Up to 40% Off select items)</p>
+                    <p>INR 10,266.00</p>
+                    <img class="logo"
+                        src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+                        alt="">
+                </div>
+                <div>
+                    <img class="pic"
+                        src="https://n.nordstrommedia.com/id/sr3/8639622b-d761-41a4-b1fb-500c0718b2e8.jpeg?q=45&dpr=2&h=262&w=170"
+                        alt="">
+                    <p>Dolce Vita</p>
+                    <h6 class="red">INR 4,568.21 - INR 5,465.56</h6>
+                    <p class="red">(Up to 40% Off select items)</p>
+                    <p>INR 10,266.00</p>
+                    <img class="logo"
+                        src="https://www.pikpng.com/pngl/m/116-1163132_line-of-stars-png-five-stars-white-transparent.png"
+                        alt="">
+                </div>
+            </div>
+        </div>
+       
+    </div>   
+    <div class="xx">
+        <div class="imgdiv">
+            <img src="https://n.nordstrommedia.com/id/sr3/f383a2f2-7343-4fb3-9552-6dc146355366.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196" alt="">
+            <img src="https://n.nordstrommedia.com/id/sr3/37ed8b9b-17a4-46d2-a022-c07a2d3587ef.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196" alt="">
+        </div> 
+    </div>
+    <div class="xx">
+        <div class="imgdiv">
+            <img src="https://n.nordstrommedia.com/id/sr3/d7244100-6ada-4b76-adea-30ab49408a88.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196" alt="">
+            <img src="https://n.nordstrommedia.com/id/sr3/0003b54a-1d46-4938-9644-0f1b7aaa905d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196" alt="">
+        </div> 
+    </div>
+    
+</body>
+</html>
