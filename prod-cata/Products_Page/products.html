@@ -28,7 +28,7 @@
                 <a href="signin.html" id="signin">Sign In</a>
                 <img src="data:image/png;base64,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"
                     alt="cart logo" id="cart-img">
-                <a id="cart-items" href="cart.html"></a>
+                <a id="cart-items"></a>
             </div>
             <hr>
             <div id="nav">
@@ -742,7 +742,7 @@
     ci.style.cursor = "pointer"
 
     ci.addEventListener("click", function () {
-        window.location.href("cart.html");
+        window.location.href("gifts.html");
     })
 
 
