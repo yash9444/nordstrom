@@ -94,7 +94,7 @@ body {
 }
 #ct {
     width: 70%;
-    height: 600px;
+    height: 500px;
     margin-right: 20px;
 }
 #ct1 {
@@ -110,14 +110,14 @@ body {
 }
 #ct3 {
     width: 100%;
-    height: 600px;
     margin-right: 20px;
     /* position: relative; */
 }
 #tex3 {
+    width: 25%;
     background-color: rgb(244, 239, 232);
     position: absolute;
-    left: 64%;
+    left: 66%;
 }
 
 #img4 {
