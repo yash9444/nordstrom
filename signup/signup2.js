@@ -3,7 +3,7 @@ document.querySelector("#PlaceName").innerText = "Hi,"+ " " + name
 document.querySelector("#showfirstName").innerText = "Welcome," + " "+ name + "!"
 
 var windowsize = window.innerWidth;
-console.log(windowsize)
+// console.log(windowsize)
 if(windowsize < 750) {
     document.querySelector("#nav").innerHTML = `<input type="search" placeholder="Search for product or brands">`
 
@@ -22,7 +22,7 @@ function messageFunction() {
     h3.innerText = "Call us to update your Nordy Club account"
     h3.style.marginTop = "-100px"
     var p = document.createElement("p")
-    p.innerText = "Looks like we might not have the right info for your account. Give us a call at 1.888.665.8779, and we'll sort it out for you."
+    p.innerText = "Looks like we might not have the right info for your account. Give us a call at 1888.665.8779, and we'll sort it out for you."
     p.style.fontSize = "12px"
     document.querySelector("#emptyDiv").append(h3, p);
 }
