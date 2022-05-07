@@ -32,7 +32,7 @@ function loginFunction() {
             alert("Login successful")
             localStorage.setItem("userName", JSON.stringify(arr[i].userFirstName));
             localStorage.setItem("is_loggedIn", JSON.stringify("true"));
-            window.location.href = "../homepage.html"
+            window.location.href = "../index.html"
             break;
         }
         else {
