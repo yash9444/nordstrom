@@ -130,6 +130,10 @@ display(view);
 
 var wishpro = document.createElement("div");
 wishpro.setAttribute("id", "wishpd");
+var head=document.createElement("h2");
+head.innerHTML="WishList Items";
+
+wishpro.append(head);
 
 // Function to Display WishList
 
@@ -175,7 +179,7 @@ displayQl(wishproduct);
 function addtocart(ele) {
 
     var exists = cartproduct.filter(function (element) {
-        return ele.productID == element.productID;
+        return ele.productID == element.id;
     })
 
     if (exists.length > 0) {
@@ -202,7 +206,7 @@ function addtocart(ele) {
         // console.log(cartproduct);
         localStorage.setItem("cartList", JSON.stringify(cartproduct));
         alert("Product added successfully");
-        window.location.reload();
+        window.location.href="cart.html"
     }
 }
 
@@ -224,12 +228,5 @@ function addtowish(ele) {
         window.location.reload();
     } 
 }
-
-
-var ci=document.querySelector("#cart-items");
-ci.innerText=cartproduct.length+" items";
-ci.style.cursor="pointer";
-
-ci.addEventListener("click",function(){
-    window.location.href("cart.html");
-});
+var len=document.querySelector("#cart-len");
+len.innerText=cartproduct.length;
