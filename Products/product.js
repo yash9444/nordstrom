@@ -213,6 +213,7 @@ var products_data = [
     },
 ];
 
+localStorage.setItem("disp",JSON.stringify(products_data));
 // Data from LOCAL STORAGE 
 
 var cartproduct = JSON.parse(localStorage.getItem("cartList")) || [];
@@ -460,11 +461,5 @@ function addtocart(ele) {
     }
 }
 
-
-var ci=document.querySelector("#cart-items");
-ci.innerText=cartproduct.length+" items";
-ci.style.cursor="pointer"
-
-ci.addEventListener("click",function(){
-    window.location.href("cart.html");
-})
+var len=document.querySelector("#cart-len");
+len.innerText=cartproduct.length;
