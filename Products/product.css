@@ -85,11 +85,15 @@ body {
     background: url("images/shopping-bag.png");
     background-size: 50px 50px;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 
-#cartlogo > p{
-    margin-top: 30px;
+#cart-len{
+    margin-top: 20px;
     margin-right: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 20px;
 }
 
 /* sidebar section */
@@ -407,6 +411,115 @@ summary:after {
 
 
 
-
-
-
+@media all and (min-width: 451px) and (max-width:750px) {
+    .page {
+        grid: 100px auto / repeat(2, 1fr);
+        grid-template-areas:
+            ". . . . ."
+            "products products products products products"
+            ". . . . .";
+    }
+    .main {
+        margin-top: -120px;
+    }
+    #products {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #btndiv{
+        display: none;
+    }
+    #cartlogo{
+        height: 30px;
+        width: 30px;
+        background-size: 30px 30px;
+    }
+    #cart-len{
+        margin-top: 10px;
+        margin-left: 3px;
+        font-size: 14px;
+    }
+    #container {
+        width: 85%;
+    }
+    #headnav > input {
+        display: none;
+    }
+    #headnav > h1 {
+        font-size: 20px;
+    }
+    #nav input {
+        width: 90%;
+        padding: 14px;
+    }
+    #uper p+p {
+        display: none;
+    }
+    #footer {
+        display: none;
+    }
+    #lastLine {
+        display: none;
+    }
+}
+@media all and (min-width: 100px) and (max-width:450px) {
+    .page {
+        grid: 100px auto / repeat(1, 1fr);
+        grid-template-areas:
+            ". . . . ."
+            "products "
+            ". . . . .";
+    }
+    #products {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #btndiv{
+        display: none;
+    }
+    .main {
+        margin-top: -120px;
+    }
+    #cartlogo{
+        height: 30px;
+        width: 30px;
+        background-size: 30px 30px;
+    }
+    #cart-len{
+        margin-top: 10px;
+        margin-left: 3px;
+        font-size: 14px;
+    }
+    
+    #container {
+        width: 85%;
+    }
+    #navContainer{
+        box-sizing: border-box;
+    }
+    #headnav > input {
+        display: none;
+    }
+    #headnav > h1 {
+        font-size: 15px;
+    }
+    #headnav > p {
+        font-size: 13px;
+    }
+    #nav input {
+        width: 90%;
+        padding: 10px;
+    }
+    #headnav h1 {
+        margin-right: -150px;
+    }
+    #uper p+p {
+        display: none;
+    }
+    #footer {
+        display: none;
+    }
+    #lastLine {
+        display: none;
+    }
+}
