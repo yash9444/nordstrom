@@ -133,7 +133,6 @@ wishpro.setAttribute("id", "wishpd");
 var head=document.createElement("h2");
 head.innerHTML="WishList Items";
 
-wishpro.append(head);
 
 // Function to Display WishList
 
@@ -232,3 +231,16 @@ function addtowish(ele) {
 }
 var len=document.querySelector("#cart-len");
 len.innerText=cartproduct.length;
+
+
+var windowsize = window.innerWidth;
+// console.log(windowsize)
+if(windowsize < 750) {
+    document.querySelector("#headnav").innerHTML = `<h1><a href="../index.html"></a> NORDSTROM</h1>
+    <p><a href="signin.html">Sign In</a></p>
+    <div id="cartlogo">
+        <a href="cart.html" id="cart-len">0</a>
+    </div>`
+    document.querySelector("#nav").innerHTML = ""
+    document.querySelector("#wishpd").innerHTML = "";
+}
