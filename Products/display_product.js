@@ -193,6 +193,7 @@ function addtocart(ele) {
             var item_size=document.querySelector('#size').value;
             var item_color=document.querySelector('#clr').value;
             var item_id=ele.productID;
+            var item_qty=ele.quantity;
             var obj={
                 image:item_image,
                 name:item_name,
@@ -200,7 +201,8 @@ function addtocart(ele) {
                 price:item_price,
                 size:item_size,
                 color:item_color,
-                id:item_id
+                id:item_id,
+                qty:item_qty,
             }
         cartproduct.push(obj);
         // console.log(cartproduct);
