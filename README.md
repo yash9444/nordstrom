@@ -82,9 +82,9 @@ Step :- 2
 
 ## Authors
 
-- [Somykant swain](https://github.com/Soumya048)
-- [Shubham](https://github.com/shubham020719)
+- [Soumyakant swain](https://github.com/Soumya048)
+- [Shubham Kumar Ram](https://github.com/shubham020719)
 - [Aman Trivedi](https://github.com/atrivedi8988)
-- [Yash](https://github.com/yash9444)
+- [Yash Gabhud](https://github.com/yash9444)
 - [Souvik Biswas](https://github.com/souvikbiswas2022)
 - [Ninad Joshi](https://github.com/Ninadjoshi212)
