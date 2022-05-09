@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout International | Nordstrom</title>
+    <link rel = "icon" href = 
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAicsdPJDcZp1DvnpaS6zb_1YzjIzlB4qAOQ&usqp=CAU" 
+            type = "image/x-icon">
+        <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+
+
+<body>
+    <div id="navContainer">
+        <div id="headnav">
+            <h1><a href="../index.html">NORDSTROM</a> </h1>
+            <div id="cartlogo">
+                <a href="../cart.html" id="cart-len">0</a>
+            </div>
+        </div>
+    </div>
+    <!-- navbar end -->
+    
+    <div id="main">
+        <!-- Two separate divs one for form and another for items -->
+        <div id="checkout">
+            <div id="secure"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock" viewBox="0 0 25 18">
+                    <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+                  </svg>
+                <h2>Secure Checkout</h2>
+                <h5>powered by Borderfree</h5>
+                
+                <select name="language" id="language">
+                    <option  value="english">English</option>
+                    <option value="chineseSimp">Chinese(Simplified) - 简体中文</option>
+                    <option value="chineseTra">Chinese(Trditional) - 中国传统的</option>
+                    <option value="french">French - Français</option>
+                    <option value="german">German - Deutsch</option>
+                    <option value="indonesian">Indonesian - Bahasa Indonesia </option>
+                    <option value="italian">Italian - Italiano</option>
+                    <option value="japnese">Japanese - 日本語</option>
+                    <option value="korean">Korean - 한국어</option>
+                    <option value="portuguese">Portuguese - Português</option>
+                    <option value="russian">Russian - русский</option>
+                    <option value="spanish">Spanish - Español</option>
+                    <option value="Turkish">Turkish - Türkçe </option>
+                </select>   
+            </div>
+            <div>
+                <p>Already Have Bordefree account? click <a href="">here.</a></p>
+            </div>
+            <hr>
+            <div id = "num"><div>1</div>
+                Delivery</div>
+            <form id="form">
+                <input id="mail" placeholder="Email" type="Email"/>
+                    <input id="fname" placeholder="First Name" type="text"/>
+                    <input id="lname"placeholder="Last Name" type="text/">
+                    <input id="add" placeholder="Address" type="text">
+                    <input placeholder="Address 2(Optional)" type="text">
+                    <input id="pcode" placeholder="Postal Code" type="number">
+                    <input placeholder="City" type="text">
+                    <input id="region" placeholder="Region(Optional)" type="text">
+                    <input id="phone" placeholder="Phone" type="number">
+                    <select id="loc" name="location" id="location">
+                        <option value="India">India</option>
+                        <option value="afganistan">Afganistan</option>
+                        <option value="albania">Albania</option>
+                        <option value="algeria">Algeria</option>
+                        <option value="aldorra">Aldorra</option>
+                        <option value="angulla">Angulla</option>
+                        <option value="chile">Chile</option>
+                        <option value="cocos">Cocos</option>
+                        <option value="colambia">Colambia</option>
+                        <option value="Denmark">Denmark</option>
+                        <option value="malasia">Malasia</option>
+                        <option value="nepal">Nepal</option>
+                        <option value="Netherland">Netherland</option>
+                        <option value="zambia">Zambia</option>
+                        <option value="zimbabwe">Zimbabwe</option>
+                    </select>
+            </form>
+            <div id="method">
+                <div class="special"><h4>Delivery Method</h4></div>
+                <div class="special"> <h4>Estimate Arrival</h4></div>
+                <div class="special"><h4>Shipping Cost</h4></div>
+                <div id="ref" ><h3>Standard</h3><p>No additional import charges at delivery</p></div>
+                <div><p>11-21 business days</p></div>
+                <div><button id="cal">Calculate</button></div>
+                <div id="ref" ><h3>Standard</h3><p>Import charges collected upon  delivery</p></div>
+                <div><p>11-21 business days</p></div>
+                <div ><button id="cal">Calculate</button></div>
+                <div id="ref"><h3>Express</h3><p>No additional import charges at delivery</p></div>
+                <div><p>6-11 business days</p></div>
+                <div><button id="cal">Calculate</button></div>
+                <div id="ref"><h3>Express</h3><p>Import charges collected upon delivery</p></div>
+                <div><p>6-11 business days</p></div>
+                <div><button id="cal">Calculate</button></div>
+            </div>
+            <button id="continue">Continue >></button>
+            <hr>
+            <div id="paymentdiv"> 
+                <div id="first">
+                    <div id="num">
+                        <div>2</div>
+                        <h3>Payment</h3>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div id="undertaking"><p>By placing the order, you agree to the <a id="atag" href="https://www.borderfree.com/terms/en_us/">Terms & Condition</a> and <a id="atag" href="https://www.borderfree.com/privacy/en_us/">Privacy Policy</a> of <a id="atag" href="https://www.borderfree.com/">Borderfree from pitney Bowes</a>, Nordstrom's inernational fulfillment service. Boderfree is an online merchant that is located at Shelton, US, 06484, 27 Waterview Drive, CT.</p></div>
+        </div>
+        
+        <div id="product">
+            <div id="cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg>
+                <h2>Your Order</h1>
+            </div>
+            <button id="cont2">Continue</button>
+            <div id="price">
+                <div>
+                    <p>Items</p>
+                    <p id="pp">&#8377
+                    <!-- Append the total price here  -->
+                    </p>
+                </div>
+                <div>
+                    <p>Shipping </p>
+                    <p>&#8377 70</p>
+                </div>
+                <div>
+                    <p>Duties & Taxes</p>
+                    <p>&#8377 60</p>
+                </div>
+                <div id="total">
+                    <h2>TOTAL</h2>
+                    <h2 id="tt">&#8377
+                        <!-- append the  total calculation here -->
+                    </h2>
+                </div>
+                <hr style="margin-right: 10px;">
+                <button id="promocode"> + Promo Code</button>
+                <hr style="margin-right: 10px;">
+                <div id="item">
+                    <!-- append card items here -->
+                </div>
+            </div>
+        </div>
+        <!-- rupee symbol htmlcode = &#8377 -->
+    </div>
+</body>
+<script src="checkout.js">
+</script>
+
+</html>

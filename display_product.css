@@ -1,0 +1,393 @@
+* {
+    font-family: century-gothic, sans-serif;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;   
+}
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* header section */
+#navContainer {
+    width: 95%;
+    margin: auto;
+}
+#navContainer a {
+    text-decoration: none;
+    color: black;
+    box-sizing: border-box;
+}
+
+#uper {
+    background-color: black;
+    width: 100%;
+    height: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#uper > p {
+    margin-right: 5%;
+}
+#headnav {
+    /* font-family: sans-serif; */
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+#headnav>input {
+    height: 45px;
+    margin-top: -5px;
+    width: 60%;
+    margin-right: -18%;
+}
+#headnav>p {
+    margin-left: 250px;
+}
+#nav {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+#nav > p:first-child > a {
+    color: red;
+}
+#nav a {
+    text-decoration: none;
+    color: rgb(65, 65, 65);
+}
+#nav p:hover {
+    text-decoration: underline 2px;
+}
+
+#cartlogo{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("images/shopping-bag.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#cart-len{
+    margin-top: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* main section */
+
+#main {
+    grid-area: products;
+}
+
+.revert {
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:grey;
+    margin-bottom: 10px;
+}
+.revert:hover > h4{
+    text-decoration: underline;
+    color:rgb(202, 156, 100);
+}
+.catviews{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: space-between;
+}
+.catviews>h2{
+    margin-right: 90px;
+
+}
+#prd{
+    display: grid;
+    grid-template-columns: 40% 35% 20%;
+    grid-template-rows: repeat(1, auto);
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: whitesmoke;
+}
+.imgdiv{
+    display: flex;
+    margin-left: 20px;
+}
+.imgdiv>img{
+    border-radius: 30px;
+    width:80%;
+    height:600px;
+}
+.sk{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#btn{
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+#wishdiv{
+    display: flex;
+    width: 150px;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0.5;
+}
+#prd2{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: left;
+}
+.pro-desc {
+    margin-top: -10px;
+    overflow: hidden;
+    text-transform: capitalize;
+    font-size: 24px;
+    color: rgb(73, 73, 73);
+    opacity: 0.7;
+    text-decoration: none;
+}
+.price {
+    font-weight: 900;
+    font-size: 24px;
+} 
+#wishpd {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-left: 2px solid grey;
+}
+.wishpc {
+    margin-bottom: 10px;
+}
+.pic{
+    width: 100%;
+}
+#wishbtn{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(223, 215, 215);
+    color: rgb(240, 102, 125);
+    border: 0px;
+    cursor: pointer;
+}
+
+
+/* footer section */
+
+#footer{
+    display: grid;
+    grid-template-columns: repeat(6,16%);
+    color: rgb(73, 73, 73);
+    margin-top: 100px;
+    justify-content: center;
+    font-family: sans-serif;
+    /* background-color: azure; */
+    background-color: #FBF8F1;
+}
+#footer p{
+    font-size: 14px;
+}
+#footer a{
+    text-decoration: none;
+    color: black;
+}
+.FH{
+    color: black;
+}
+#lastLine {
+    padding: 2%;
+    background-color: #FBF8F1;
+}
+#lastLine > span {
+    margin-right: 40px;
+    font-size: 13px;
+    color: grey;
+}
+#lastLine span:hover {
+    text-decoration: underline 2px;
+}
+#footer>div p:hover {
+    text-decoration: underline 2px;
+}
+#smDiv {
+    display: flex;
+    flex-direction: column;
+}
+#smDiv > div:nth-child(1){
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#smDiv > div:nth-child(1) img {
+    height: 25px;
+}
+#smDiv > div:nth-child(2) img {
+    height: 25px;
+    margin: 5px;
+}
+#smDiv > div:nth-child(2) img:nth-child(5) {
+    height: 20px;
+    margin-bottom: 10px;
+}
+.zoom:hover {
+    -ms-transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+}
+
+@media all and (min-width: 451px) and (max-width:750px) {
+
+    #prd{
+        display: flex;
+        flex-direction: column;
+    }
+    .imgdiv{
+        display: flex;
+        margin-left: 20px;
+    }
+    .imgdiv>img{
+        border-radius: 30px;
+        width:80%;
+        height:600px;
+    }
+    .sk{
+        width: 100%;
+        height: 40px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+    
+    #btn{
+        width: 100%;
+        height: 40px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+    #wishdiv{
+        display: flex;
+        width: 150px;
+        justify-content: space-around;
+        align-items: center;
+        opacity: 0.5;
+    }
+    #wishpd, .wh {
+        display: none;
+    }
+    #container {
+        width: 85%;
+    }
+    #headnav > input {
+        display: none;
+    }
+    #headnav > h1 {
+        font-size: 20px;
+    }
+    #nav input {
+        width: 90%;
+        padding: 14px;
+    }
+    #uper p+p {
+        display: none;
+    }
+    #footer {
+        display: none;
+    }
+    #lastLine {
+        display: none;
+    }
+}
+@media all and (min-width: 100px) and (max-width:450px) {
+
+    #prd{
+        display: flex;
+        flex-direction: column;
+    }
+    .imgdiv{
+        display: flex;
+        margin-left: 20px;
+    }
+    .imgdiv>img{
+        border-radius: 30px;
+        width:80%;
+        height:600px;
+    }
+    .sk{
+        width: 100%;
+        height: 40px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+    
+    #btn{
+        width: 100%;
+        height: 40px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+    #wishdiv{
+        display: flex;
+        width: 150px;
+        justify-content: space-around;
+        align-items: center;
+        opacity: 0.5;
+    }
+    #wishpd, .wh {
+        display: none;
+    }
+    
+    #container {
+        width: 85%;
+    }
+    #navContainer{
+        box-sizing: border-box;
+    }
+    #headnav > input {
+        display: none;
+    }
+    #headnav > h1 {
+        font-size: 15px;
+    }
+    #headnav > p {
+        font-size: 13px;
+    }
+    #nav input {
+        width: 90%;
+        padding: 10px;
+    }
+    #headnav h1 {
+        margin-right: -150px;
+    }
+    #uper p+p {
+        display: none;
+    }
+    #footer {
+        display: none;
+    }
+    #lastLine {
+        display: none;
+    }
+}

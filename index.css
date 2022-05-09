@@ -1,0 +1,571 @@
+#container {
+    width: 95%;
+    margin: auto;
+}
+* {
+    font-family: century-gothic, sans-serif;
+}
+body {
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+}
+#fix {
+    position: fixed;
+    top: 88%;
+    left: 94%;
+}
+#cartlogo{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/shopping-bag.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#cartlogo > a {
+    margin-top: 10px;
+}
+#uper {
+    background-color: black;
+    width: 100%;
+    height: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#headnav {
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#headnav>input {
+    height: 45px;
+    width: 60%;
+}
+#headnav>h1 {
+    margin-right: -10%;
+}
+#nav {
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+#nav a {
+    text-decoration: none;
+    color: rgb(65, 65, 65);
+}
+#nav > li:first-child > a {
+    color: red;
+}
+#sign>p {
+    color: rgb(65, 65, 65);
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    /* font-family: sans-serif; */
+}
+#sign {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#sign>button {
+    background-color: white;
+    padding: 10px 40px 10px 40px;
+    border: 1px solid;
+}
+#sign>button:hover{
+    background-color: whitesmoke;
+    border: 1px solid white;
+}
+#promo {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    background-color: rgb(244, 239, 232);
+
+}
+#promo>img {
+    width: 50%;
+}
+#ct {
+    width: 70%;
+    height: 500px;
+    margin-right: 20px;
+}
+#ct1 {
+    width: 70%;
+    height: 500px;
+    margin-top: 40px;
+    margin-right: 20px;
+}
+
+#img3 {
+    display: flex;
+    align-items: center;
+}
+#ct3 {
+    width: 100%;
+    margin-right: 20px;
+    /* position: relative; */
+}
+#tex3 {
+    width: 25%;
+    background-color: rgb(244, 239, 232);
+    position: absolute;
+    left: 66%;
+}
+
+#img4 {
+    display: flex;
+    align-items: center;
+    height: 300px;
+    position: relative;
+}
+#ct4 {
+    width: 100%;
+}
+#tex4 {
+    background-color: rgb(244, 239, 232);
+    width: 30%;
+    position: absolute;
+    left: 10%;
+    top: 15%;
+}
+#img5 {
+    margin-top: 100px;
+    position: relative;
+}
+#img5 > h3 {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+}
+#img5 > #im5p {
+    position: absolute;
+    top: 30%;
+    left: 57%;
+} 
+.tex {
+    background-color: rgb(244, 239, 232);
+}
+
+.trend {
+    /* width: 90%; */
+    display: grid;
+    grid-template-columns: repeat(6, 17%);
+    grid-template-rows: repeat(1, 550px);
+    justify-content: space-around;
+}
+
+.trend>div {
+    border: 0px solid;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.tpic {
+    width: 100%;
+    height: 60%;
+}
+
+.tlogo {
+    width: 40%;
+
+}
+
+.red {
+    color: red;
+    margin-top: -23px;
+}
+
+.tpic+p {
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+#trending{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: repeat(1,700px);
+    justify-content: space-between;
+}
+#trending>div{
+    margin-top: 40px;
+    border: 0px solid;
+    font-size: 15px;
+    
+}
+#trending>div>img{
+    width: 100%;
+}
+#col3{
+    display: grid;
+    grid-template-columns: repeat(3,31%);
+    grid-template-rows: repeat(1,600px);
+    margin-top: 50px;
+    gap: 10px;
+    justify-content: space-evenly;
+    color: rgb(61, 59, 59);
+}
+#col3>div>img{
+    width: 104%;
+}
+#NORDY{
+    background-color: forestgreen;
+    display: flex;
+    margin-top: 30px;
+    height: 200px;
+}
+#NORDY>img{
+    align-items: center;
+    width: 70%;
+}
+#NORDY + hr +h2 > span{
+    margin-right: 10px;
+} 
+#hhn{
+    height: 2.5px; 
+    background-color: black; 
+    margin-top: 60px;
+}
+#hhn2 {
+    height: 2.5px;
+    background-color: black; 
+    margin-top: 80px;
+}
+#category{
+    display: grid;
+    grid-template-columns: repeat(6,16.8%);
+    grid-template-rows: repeat(1,auto);
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 60px;
+    /* font-family: sans-serif; */
+}
+#category img{
+    width: 100%;
+}
+.cata1 > span {
+    margin-right: 10px;
+}
+#col4{
+    display: grid;
+    grid-template-columns: repeat(4,24%);
+    justify-content: space-evenly;
+    margin-top: 80px;
+}
+#col4>div>img{
+    width: 100%;
+}
+#footer{
+    display: grid;
+    grid-template-columns: repeat(6,16%);
+    color: rgb(73, 73, 73);
+    margin-top: 100px;
+    justify-content: center;
+    /* font-family: sans-serif; */
+    background-color: #FBF8F1;
+}
+#footer p{
+    font-size: 14px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#footer>div p:hover {
+    text-decoration: underline 2px;
+}
+.FH{
+    color: black;
+}
+#headnav input{
+    margin-left: 150px;
+}
+.cat{
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 182px;
+}
+#nav :hover .cat{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    background-color: white;
+    padding: 30px;
+}
+.ddInside {
+    display: none;
+    position: absolute;
+    left: 77%;
+    top: 106px;
+    
+}
+.ddInside p:hover  {
+    text-decoration: underline;
+    cursor: pointer;
+}
+#ddSignup :hover .ddInside {
+    width: 20%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+}
+.ddInside img {
+    margin-right: 6px;
+    height: 17px;
+}
+#logoutDiv {
+    background-color: black;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+#logoutDiv a {
+    color: white;
+}
+.cat>div{
+    /* border: 1px solid green; */
+    width: 16%;
+    margin: 0px;
+    margin-top: 0px;
+    font-family: Brandon Text,Arial,sans-serif;
+    cursor: pointer;
+}
+.cat>div>p{
+    color: #393939;
+}
+.cat>div>img:nth-child(1){
+    /* border: 1px solid black; */
+    width: 20%;
+    margin-left: 75%;
+}
+.cat>div>img:nth-child(2){
+    width: 100%;
+}
+.cat>div>h4:hover,.cat>div>p:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    border-color: black;
+    color: darkorange;
+}
+#lastLine {
+    padding: 2%;
+    background-color: #FBF8F1;
+}
+#lastLine > span {
+    margin-right: 40px;
+    font-size: 13px;
+    color: grey;
+}
+#lastLine span:hover {
+    text-decoration: underline 2px;
+}
+#smDiv {
+    display: flex;
+    flex-direction: column;
+}
+#smDiv > div:nth-child(1){
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#smDiv > div:nth-child(1) img {
+    height: 25px;
+
+}
+#smDiv > div:nth-child(2) img {
+    height: 25px;
+    margin: 5px;
+    
+}
+#smDiv > div:nth-child(2) img:nth-child(5) {
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+
+@media all and (min-width: 501px) and (max-width:750px) {
+    #headnav > input {
+        display: none;
+    }
+    #cartlogo {
+        height: 35px;
+        width: 35px;
+    } 
+    #headnav > h1 {
+        font-size: 20px;
+        margin-right: 40%;
+    }
+    #nav input {
+        width: 90%;
+        padding: 14px;
+    }
+    #uper p+p {
+        display: none;
+    }
+    #footer {
+        display: none;
+    }
+    #lastLine {
+        display: none;
+    }
+    #ct1 {
+        height: 200px;
+        width: 100%;
+    }
+    .trend {
+        grid-template-columns: repeat(3, 25%);
+        grid-template-rows: repeat(2, auto);
+        justify-content: space-around;
+        row-gap: 150px;
+    }
+    #ct {
+        height: 200px;
+        width: 100%;
+    }
+    .tex {
+        width: 90%;
+        margin-left: -60px;
+    }
+    #trending{
+        grid-template-columns: repeat(1,100%);
+        grid-template-rows: repeat(2,450px);
+        border: 1px solid red;
+    }
+    #img3 {
+        /* flex-direction: column;
+        height: 400px; */
+        display: none;
+    }
+    #col3{
+        grid-template-columns: repeat(1,100%);
+        grid-template-rows: repeat(3,850px);
+        margin-top: 50px;
+        gap: 10px;
+        justify-content: space-evenly;
+        color: rgb(61, 59, 59);
+    }
+    #NORDY {
+        display: none;
+    }
+    #img4, #img5 {
+        display: none;
+    }
+    #hhn {
+        margin-top: 160px;
+    }
+    #hhn2 {
+        margin-top: 160px;
+    }
+    #fix {
+        display: none;
+    }
+}
+@media all and (min-width: 100px) and (max-width:500px) {
+    #navContainer{
+        box-sizing: border-box;
+    }
+    #cartlogo {
+        height: 30px;
+        width: 30px;
+    } 
+    #headnav > input {
+        display: none;
+    }
+    #headnav > h1 {
+        font-size: 15px;
+    }
+    #ddSignup {
+        margin-left: 70%;
+    }
+    #displayHere {
+        font-size: 10px;
+    }
+    #headnav > p {
+        font-size: 13px;
+    }
+    #nav input {
+        width: 90%;
+        padding: 10px;
+    }
+    #headnav h1 {
+        margin-right: -150px;
+    }
+    #uper p+p {
+        display: none;
+    }
+    #footer {
+        display: none;
+    }
+    #lastLine {
+        display: none;
+    }
+    #img3 {
+        flex-direction: column;
+    }
+    #ct1 {
+        height: 200px;
+        width: 100%;
+    }
+    .trend {
+        grid-template-columns: repeat(3, 25%);
+        grid-template-rows: repeat(2, auto);
+        justify-content: space-around;
+        row-gap: 150px;
+    }
+    #ct {
+        height: 200px;
+        width: 100%;
+    }
+    .tex {
+        width: 90%;
+        margin-left: -60px;
+    }
+    #trending{
+        margin-top: 100px;
+        grid-template-columns: repeat(1,100%);
+        grid-template-rows: repeat(3,200px);
+        gap: 200px;
+    }
+    #img3 {
+        display: none;
+    }
+    #col3{
+        grid-template-columns: repeat(1,100%);
+        grid-template-rows: repeat(3,550px);
+        margin-top: 50px;
+        gap: 10px;
+        justify-content: space-evenly;
+        color: rgb(61, 59, 59);
+    }
+    #NORDY {
+        display: none;
+    }
+    #img4, #img5 {
+        display: none;
+    }
+    #hhn {
+        margin-top: 160px;
+    }
+    #hhn2 {
+        margin-top: 160px;
+    }
+    #fix {
+        display: none;
+    }
+}
