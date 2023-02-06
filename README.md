@@ -1,4 +1,4 @@
-## NORDSTROM
+
 Nordstrom, is an American luxury department store chain headquartered in Seattle, Washington and founded by John W. Nordstrom and Carl F. Wallin in 1901. The original Wallin & Nordstrom store operated exclusively as a shoe store, and a second Nordstrom's shoe store opened in 1923. The growing Nordstrom Best chain began selling clothing in 1963, and became the Nordstrom full-line retailer that presently exists by 1971. The company founded its off-price Nordstrom Rack division in 1973, and grew both full-line and off-price divisions throughout the United States in the following years before expanding into Canada in 2014 and Puerto Rico from 2015 until 2020.
 
 ![Logo](https://play-lh.googleusercontent.com/-VMFwO9byWAoA7pV5pyuWHvkDTpFpOKh9_nuhG2-nZAcbDt5QWJVwD739im95-tTpbc)
